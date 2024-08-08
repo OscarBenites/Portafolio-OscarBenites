@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+[data-theme="dark"] {
+    --primary: rgb(45,45,45);
+    --background: rgb(30,30,30);
+    --barbackground: rgb(0, 0, 0);
+    --console: #000;
+    --text: #fff;
+    --prueba: orange;
+}
+
+[data-theme="light"] {
+    --primary: rgb(255,255,255);
+    --background: rgb(236,236,236);
+    --barbackground: rgb(255, 255, 255);
+    --console: #fff;
+    --text: #000;
+    --prueba: blue;
+}
 *{margin: 0;padding: 0;box-sizing: border-box;font-family:'Open Sans', sans-serif;}
 body{
     height: 100px;
-    background-color: rgb(209, 32, 32);
+    background: var(--prueba);   
 }
 
 li{

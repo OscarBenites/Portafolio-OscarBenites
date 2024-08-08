@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+[data-theme="dark"] {
+    --primary: rgb(45,45,45);
+    --background: rgb(30,30,30);
+    --barbackground: rgb(0, 0, 0);
+    --console: #000;
+    --text: #fff;
+    --prueba: orange;
+}
+
+[data-theme="light"] {
+    --primary: rgb(255,255,255);
+    --background: rgb(236,236,236);
+    --barbackground: rgb(255, 255, 255);
+    --console: #fff;
+    --text: #000;
+    --prueba: red;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--prueba);    
+    display: flex;
+    transition: none; /* Elimina transiciones iniciales */
+}
+
+body:not(.preload) {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Reactiva transiciones */
+}
+
+label {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+}
+
+.sun {
+    position: absolute;
+    font-size: 3rem;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+input:checked ~ .sun {
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+
+.moon {
+    font-size: 3rem;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+    transition: 1s ease;
+}
+
+input:checked ~ .moon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+.toggle {
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 
+        inset 0 8px 60px rgba(0,0,0,.1),
+        inset 0 8px 8px rgba(0,0,0,.1),
+        inset 0 -4px 4px rgba(0,0,0,.1);
+    z-index: -1;
+    transition: 1s;
+}
+
+input:checked ~ .toggle {
+    background: #f8f8f8;
+}
+
+.animateBg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #f8f8f8;
+    z-index: -2;
+    clip-path: circle(0% at 50% 50%);
+    transition: 1.5s ease-in-out;
+}
+
+input:checked ~ .animateBg {
+    clip-path: circle(100% at 50% 50%);
+}

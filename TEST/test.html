@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OscarBenites | Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/icon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="preload"> <!-- Añade la clase "preload" -->
+    <label id="btheme">
+        <input type="checkbox" id="theme-toggle">
+        <ion-icon name="sunny" class="sun"></ion-icon>
+        <ion-icon name="moon" class="moon"></ion-icon>
+        <span class="toggle"></span>
+        <span class="animateBg"></span>
+    </label>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../JS/test.js"></script> 
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Al cargar la página, revisa si hay un tema guardado en localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        // Ajusta el estado del checkbox según el tema guardado
+        toggle.checked = savedTheme === 'dark';
+
+        // Cambia el tema y guarda la preferencia en localStorage
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Elimina la clase "preload" después de un corto tiempo para permitir animaciones posteriores
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.remove('preload');
+            }, 100); // 100ms para asegurar que la página esté completamente cargada
+        });
+    </script>
+</body>
+</html>
