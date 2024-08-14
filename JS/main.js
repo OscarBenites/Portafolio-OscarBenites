@@ -95,7 +95,7 @@ const changeLanguage = async (language) => {
         const section = textsToChange.dataset.section;
         const value = textsToChange.dataset.value;
 
-        console.log(section, value);
+        console.log(section, value); 
     }
 }
 
