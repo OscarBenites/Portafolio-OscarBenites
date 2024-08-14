@@ -1,11 +1,5 @@
 {
     "profile": {
-        "rol": "Android Developer",
-        "Description":"TEST"
-    },
-    "Experience": {
-        "first-job-title": "Team Manager",
-        "first-job-dates":"ccc",
-        "first-job-desc":"bbb"
+        "rol": "Android Developer"
     }
 }

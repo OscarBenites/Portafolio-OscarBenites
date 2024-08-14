@@ -1,11 +1,5 @@
 {
     "profile": {
-        "rol": "Desarrollador Android",
-        "Description":"PRUEBA"
-    },
-    "Experience": {
-        "first-job-title": "Supervisor",
-        "first-job-dates": "TEST PRUEBA",
-        "first-job-desc": "aa"
+        "rol": "Desarrollador Android"
     }
 }
