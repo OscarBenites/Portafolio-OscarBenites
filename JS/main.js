@@ -35,8 +35,6 @@ function toggleTheme() {
             icon.classList.replace('bx-moon', 'bx-sun');
         }
     });
-
-    console.log(`Theme changed to: ${newTheme}`); // Verifica el cambio de tema
 }
 
 // Inicializa el tema guardado
@@ -55,7 +53,6 @@ themeToggleIcons.forEach(icon => {
 // Agrega el event listener a los íconos
 themeToggleIcons.forEach(icon => {
     icon.addEventListener('click', () => {
-        console.log('Icon clicked'); // Verifica que el click se detecte
         toggleTheme();
     });
 });
