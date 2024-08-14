@@ -116,6 +116,10 @@ i.nav__icon{
     display: flex;
     justify-content: center;
 }
+/* FLAGS */
+.flags__item{
+    width: 15px;
+}
 /* SECTION */
 section#BodyTitle{
     height: calc(100vh - 60px);

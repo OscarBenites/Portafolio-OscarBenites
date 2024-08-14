@@ -1,8 +1,8 @@
-// ACTION BOTON NAVBAR //
 const toggleBtn = document.querySelector(".toggle_btn")
 const toggleBtnIcon = document.querySelector(".toggle_btn i")
 const dropDownMenu = document.querySelector(".dropdown_menu")
 
+// Cambio de icon en nav
 toggleBtn.onclick = function(){
     dropDownMenu.classList.toggle("open")
     const isOpen = dropDownMenu.classList.contains("open")
@@ -67,3 +67,31 @@ window.addEventListener('load', () => {
     }, 100); // 100ms para asegurar que la página esté completamente cargada
 });
 
+// Cambio de icon flags
+var IconFlag = document.getElementById("IconFlag");
+var FL = document.getElementById("FlagLenguage");
+var IconFlagclicks = 0;
+
+function UpdateIconFlag() {
+    IconFlagclicks = IconFlagclicks + 1;
+    if (IconFlagclicks % 2 != 0) {
+        IconFlag.setAttribute("src", "./img/us.svg");
+       FL.dataset.lenguage = "en"
+    }else{
+        IconFlag.setAttribute("src", "./img/pe.svg");
+        FL.dataset.lenguage = "es"
+   }
+}
+
+//  Cambio lenguage
+const flagsElement = document.getElementById("flags");
+const changeLanguage = async (language) => {
+    const requestJson = await fetch(`./languages/${language}.json`);
+    const texts = await requestJson.json();
+
+    console.log(texts)
+}
+
+flagsElement.addEventListener("click" , (e)=> {
+    changeLanguage(e.target.parentElement.dataset.lenguage);
+});
