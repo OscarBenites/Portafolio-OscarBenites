@@ -75,11 +75,11 @@ var IconFlagclicks = 0;
 function UpdateIconFlag() {
     IconFlagclicks = IconFlagclicks + 1;
     if (IconFlagclicks % 2 != 0) {
-        IconFlag.setAttribute("src", "./img/us.svg");
-       FL.dataset.lenguage = "en"
-    }else{
         IconFlag.setAttribute("src", "./img/pe.svg");
-        FL.dataset.lenguage = "es"
+       FL.dataset.lenguage = "es"
+    }else{
+        IconFlag.setAttribute("src", "./img/us.svg");
+        FL.dataset.lenguage = "en"
    }
 }
 
