@@ -85,7 +85,6 @@ function UpdateIconFlag() {
 
 //  Cambio lenguage
 const flagsElement = document.getElementById("flags");
-
 const textsToChange = document.querySelectorAll("[data-section]");
 
 const changeLanguage = async (language) => {
@@ -93,10 +92,7 @@ const changeLanguage = async (language) => {
     const texts = await requestJson.json();
 
     for(const textsToChange of textsToChange){
-        const section = textsToChange.dataset.section;
-        const value = textsToChange.dataset.value;
-
-        console.log(section, value); 
+        console.log(textsToChange); 
     }
 }
 
