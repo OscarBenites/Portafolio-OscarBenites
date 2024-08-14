@@ -92,8 +92,8 @@ const changeLanguage = async (language) => {
     const texts = await requestJson.json();
 
     for(const textToChange of textsToChange){
-        const section = textsToChange.dataset.section;
-        const value = textsToChange.dataset.value;
+        const section = textToChange.dataset.section;
+        const value = textToChange.dataset.value;
 
         textToChange.innerHTML= texts[section][value];
     }
