@@ -1,17 +1,3 @@
-const toggleBtn = document.querySelector(".toggle_btn")
-const toggleBtnIcon = document.querySelector(".toggle_btn i")
-const dropDownMenu = document.querySelector(".dropdown_menu")
-
-// Cambio de icon en nav
-toggleBtn.onclick = function(){
-    dropDownMenu.classList.toggle("open")
-    const isOpen = dropDownMenu.classList.contains("open")
-
-    toggleBtnIcon.classList = isOpen
-    ? "fa-solid fa-xmark"
-    : "fa-solid fa-bars"
-}
-
 // Selecciona los íconos por sus IDs
 const themeToggleIcons = [
     document.getElementById('theme-ssoggle'),
