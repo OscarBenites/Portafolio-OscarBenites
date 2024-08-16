@@ -106,7 +106,7 @@ section#BodyTitle{
         margin: 0 0 0 20px;
     }
 }
-@media(max-width: 576px){
+@media(max-width: 760px){
     .icons{
         display: inline-block;
     }
