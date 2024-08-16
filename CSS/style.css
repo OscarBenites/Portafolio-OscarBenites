@@ -59,13 +59,13 @@ a,h2,p{
 }
 .logo{
     font-size: 2rem;
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
     font-weight: 700;
 }
 .navbar a{
     font-size: 1.15rem;
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
