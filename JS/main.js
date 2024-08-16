@@ -1,8 +1,13 @@
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+      event.preventDefault(); // Evita la recarga de la página
+      // Lógica adicional aquí si necesitas
+      console.log("Item del navbar clickeado");
+    });
+  });
 // Selecciona los íconos por sus IDs
-const themeToggleIcons = [
-    document.getElementById('theme-ssoggle'),
-    document.getElementById('themetwo')
-];
+// Selecciona el ícono por su ID
+const themeToggleIcon = document.getElementById('theme-ssoggle');
 
 const html = document.documentElement;
 
@@ -14,34 +19,36 @@ function toggleTheme() {
     localStorage.setItem('theme', newTheme);
 
     // Cambiar la clase del ícono según el nuevo tema
-    themeToggleIcons.forEach(icon => {
-        if (newTheme === 'dark') {
-            icon.classList.replace('bx-sun', 'bx-moon');
-        } else {
-            icon.classList.replace('bx-moon', 'bx-sun');
-        }
-    });
+    if (newTheme === 'dark') {
+        themeToggleIcon.classList.replace('bx-sun', 'bx-moon');
+    } else {
+        themeToggleIcon.classList.replace('bx-moon', 'bx-sun');
+    }
 }
 
 // Inicializa el tema guardado
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
 
-// Ajusta los íconos según el tema guardado
-themeToggleIcons.forEach(icon => {
-    if (savedTheme === 'dark') {
-        icon.classList.replace('bx-sun', 'bx-moon');
-    } else {
-        icon.classList.replace('bx-moon', 'bx-sun');
-    }
+// Ajusta el ícono según el tema guardado
+if (savedTheme === 'dark') {
+    themeToggleIcon.classList.replace('bx-sun', 'bx-moon');
+} else {
+    themeToggleIcon.classList.replace('bx-moon', 'bx-sun');
+}
+
+// Agrega el event listener al ícono
+themeToggleIcon.addEventListener('click', () => {
+    toggleTheme();
 });
 
-// Agrega el event listener a los íconos
-themeToggleIcons.forEach(icon => {
-    icon.addEventListener('click', () => {
-        toggleTheme();
-    });
+// Elimina la clase "preload" después de un corto tiempo para permitir animaciones posteriores
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.body.classList.remove('preload');
+    }, 100); // 100ms para asegurar que la página esté completamente cargada
 });
+
 
 // Elimina la clase "preload" después de un corto tiempo para permitir animaciones posteriores
 window.addEventListener('load', () => {
