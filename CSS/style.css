@@ -3,7 +3,7 @@
 [data-theme="dark"] {
     --primary: rgb(45,45,45);
     --background: rgb(30,30,30);
-    --barbackground: rgb(0, 0, 0);
+    --barbackground: rgba(30,30,30, 0.9);
     --console: #000;
     --text: #fff;
     --prueba: orange;
@@ -11,23 +11,22 @@
 
 [data-theme="light"] {
     --primary: rgb(255,255,255);
-    --background: #ECECF7;
-    --barbackground: rgb(255, 255, 255);
+    --background: rgb(236, 236, 247);
+    --barbackground: rgba(236, 236, 247, 0.9);
     --console: #fff;
     --text: #000;
-    --prueba: blue;
 }
-*{margin: 0;padding: 0;box-sizing: border-box;font-family:'Open Sans', sans-serif;}
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: Figtree, sans-serif;}
 body{
     height: 100px;
     background: var(--background);   
 }
-a,h2,p{
+a,h1,p,h2{
     text-decoration: none;
     color: var(--text);
 }
 /* HEADER */
-.header{
+.header{  
     position: fixed;
     top: 0;
     left: 0;
@@ -45,8 +44,7 @@ a,h2,p{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(50);
+    background: var(--barbackground);
     z-index: -1;
 }
 .header::after{
@@ -63,6 +61,7 @@ a,h2,p{
     text-decoration: none;
     font-weight: 700;
 }
+
 .navbar a{
     font-size: 1.15rem;
     color: var(--text);
@@ -87,14 +86,94 @@ a,h2,p{
     width: 15px;
 }
 /* SECTION */
-section#BodyTitle{
-    height: calc(100vh - 60px);
+#ContentMain{
+    margin-top: 80px;
+    margin-left: 20%;
+    margin-right: 20%;
+    /*border: solid 2px;
+    border-color: red;*/
+}
+#BodyTitle{
+    height: calc(50vh - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
+    /*border: solid 2px;
+    border-color: blue;*/
+}
+#BodyTitle .FotoPerfil, #BodyTitle .Presentacion, #BodyTitle .Redes{
+    margin: 10px 0;
+}/*
+#BodyTitle .FotoPerfil{
+    border: solid 2px;
+    border-color: red;
+}
+#BodyTitle .Presentacion{
+    border: solid 2px;
+    border-color: red;
+}*/
+.status-button {
+    background-color: #E0FFE0; /* Fondo color verde claro */
+    color: #5a7c5a; /* Color del texto verde oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 2px solid transparent; /* Borde inicialmente transparente */
+    border-radius: 20px; /* Bordes redondeados */
+    display: inline-block; /* Ajusta al contenido */
+    font-family: Arial, sans-serif; /* Fuente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar el texto */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    position: relative; /* Para controlar la posición de los pseudoelementos */
+    transition: color 0.3s ease; /* Transición suave del color del texto */
+  }
+  
+  .status-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Coincide con el border-radius del botón */
+    border: 2px solid #89C289; /* Borde verde oscuro */
+    opacity: 0;
+    animation: border-animate 3s linear infinite; /* Animación infinita */
+  }
+  
+  @keyframes border-animate {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .status-button:hover {
+    color: #66A066; /* Color del texto más oscuro al hacer hover */
+  }
+  
+#BodyTitle h1{
+    font-size: 50px;
+}
+#BodyTitle p{
+    font-size: 20px;
+}/*
+#BodyTitle .Redes{
+    border: solid 2px;
+    border-color: red;
+}*/
+section h2{
+    font-size: 40px;
 }
 /* ABOUT ME */
 .Perfil-IMG{
@@ -107,12 +186,26 @@ section#BodyTitle{
     .header{
         padding: 1.3rem 5%;
     }
+    #ContentMain{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
     .flags__item{
         width: 15px;
         margin: 0 0 0 20px;
     }
 }
 @media(max-width: 760px){
+    #ContentMain{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #BodyTitle h1{
+        font-size: 30px;
+    }
+    #BodyTitle p{
+        font-size: 15px;
+    }
     .icons{
         display: inline-block;
     }
@@ -131,7 +224,7 @@ section#BodyTitle{
         left: 0;
         width: 100%;
         height: 0;
-        background: rgba(0, 0, 0, .1);
+        background: var(--barbackground);
         backdrop-filter: blur(50);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
         overflow: hidden;

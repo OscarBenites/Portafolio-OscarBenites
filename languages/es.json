@@ -5,6 +5,8 @@
         "Contact":"Contacto"
     },
     "profile": {
+        "name":"Hola, soy Oscar Benites",
+        "me":"Apasionado en el desarrollo movil y escritorio",
         "rol": "Desarrollador Android"
     }
 }
