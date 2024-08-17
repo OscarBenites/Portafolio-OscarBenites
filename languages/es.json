@@ -1,4 +1,9 @@
 {
+    "navbar":{
+        "About": "Sobre mí",
+        "Projects":"Projectos",
+        "Contact":"Contacto"
+    },
     "profile": {
         "rol": "Desarrollador Android"
     }

@@ -21,23 +21,26 @@
                 <i class='bx bx-x' id="close-icon"></i>
             </label>
             <nav class="navbar">
-                <a href="" style="--i:0;" class="nav-item">Home</a>
-                <a href="" style="--i:1;" class="nav-item">About</a>
-                <a href="" style="--i:2;" class="nav-item">Projects</a>
-                <a href="" style="--i:3;" class="nav-item">Contact</a>
-                <a href="" style="--i:4;" class="nav-item"><i class='bx bx-sun nav__icon' id="theme-ssoggle"></i></a>
+                <a href="" style="--i:0;" class="nav-item" data-section="navbar" data-value="About">Sobre mí</a>
+                <a href="" style="--i:1;" class="nav-item" data-section="navbar" data-value="Projects">Projectos</a>
+                <a href="" style="--i:2;" class="nav-item" data-section="navbar" data-value="Contact">Contacto</a>
+                <a href="" style="--i:3;" class="nav-item"><i class='bx bx-sun nav__icon' id="theme-ssoggle"></i></a>
             </nav>
         </header>
         <!-- BodyPage -->
         <main>
             
             <section id="BodyTitle">
-                <p data-section="profile" data-value="rol">Desarrollador Android</p>
                 <div id="flags" class="flags">
                     <div class="flags__item" data-lenguage="es" id="FlagLenguage">
                         <img src="./img/us.svg" alt="" id="IconFlag" style="cursor:pointer" onclick="UpdateIconFlag()">
                     </div>
                 </div>
+                
+                <img src="./img/Perfil.png" alt="Perfil" class="Perfil-IMG">
+                <p data-section="profile" data-value="rol">Desarrollador Android</p>
+
+
             </section>
         </main>
         <footer><p>Redes</p></footer>

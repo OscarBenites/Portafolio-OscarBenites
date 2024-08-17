@@ -1,4 +1,9 @@
-{
+{           
+    "navbar":{
+        "About": "About",
+        "Projects":"Projects",
+        "Contact":"Contact"
+    },
     "profile": {
         "rol": "Android Developer"
     }

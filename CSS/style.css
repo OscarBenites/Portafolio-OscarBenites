@@ -11,7 +11,7 @@
 
 [data-theme="light"] {
     --primary: rgb(255,255,255);
-    --background: rgb(236,236,236);
+    --background: #ECECF7;
     --barbackground: rgb(255, 255, 255);
     --console: #fff;
     --text: #000;
@@ -20,7 +20,7 @@
 *{margin: 0;padding: 0;box-sizing: border-box;font-family:'Open Sans', sans-serif;}
 body{
     height: 100px;
-    background: var(--barbackground);   
+    background: var(--background);   
 }
 a,h2,p{
     text-decoration: none;
@@ -95,6 +95,12 @@ section#BodyTitle{
     justify-content: center;
     text-align: center;
     color: #fff;
+}
+/* ABOUT ME */
+.Perfil-IMG{
+    width: 96px;
+    height: 96px;
+    border-radius: 48px;
 }
 /* RESPONSIVE */
 @media(max-width: 992px){
