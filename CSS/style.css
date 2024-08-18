@@ -187,8 +187,7 @@ section h2{
         padding: 1.3rem 5%;
     }
     #ContentMain{
-        margin-left: 10%;
-        margin-right: 10%;
+        margin: 20% 10% 0 10%;
     }
     .flags__item{
         width: 15px;
@@ -197,8 +196,7 @@ section h2{
 }
 @media(max-width: 760px){
     #ContentMain{
-        margin-left: 5%;
-        margin-right: 5%;
+        margin: 25% 5% 0 5%;
     }
     #BodyTitle h1{
         font-size: 30px;
