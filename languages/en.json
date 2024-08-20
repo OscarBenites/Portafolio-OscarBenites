@@ -2,11 +2,15 @@
     "navbar":{
         "About": "About",
         "Projects":"Projects",
-        "Contact":"Contact"
+        "Education":"Education",
+        "Contact":"Contact me on"
     },
     "profile": {
         "name":"Hello, I'm Oscar Benites",
         "me":"Passionate about mobile and desktop development",
         "rol": "Android Developer"
+    },
+    "footer":{
+        "CR":"Copyright © All Right Reserved | by Oscar Benites"
     }
 }

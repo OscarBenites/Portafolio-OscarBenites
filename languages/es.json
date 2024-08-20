@@ -2,11 +2,15 @@
     "navbar":{
         "About": "Sobre mí",
         "Projects":"Projectos",
-        "Contact":"Contacto"
+        "Education":"Educación",
+        "Contact":"Mis contactos"
     },
     "profile": {
         "name":"Hola, soy Oscar Benites",
         "me":"Apasionado en el desarrollo movil y escritorio",
         "rol": "Desarrollador Android"
+    },
+    "footer":{
+        "CR":"Copyright © Casi todos los derechos reservados | Oscar Benites"
     }
 }
