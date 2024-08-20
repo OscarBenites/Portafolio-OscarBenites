@@ -3,7 +3,8 @@
         "About": "About",
         "Projects":"Projects",
         "Education":"Education",
-        "Contact":"Contact me on"
+        "Contact":"Contact",
+        "Follow":"Follow me"
     },
     "profile": {
         "name":"Hello, I'm Oscar Benites",
