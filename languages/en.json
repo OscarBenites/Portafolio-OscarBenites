@@ -9,7 +9,9 @@
     "profile": {
         "name":"Hello, I'm Oscar Benites",
         "me":"Passionate about mobile and desktop development",
-        "rol": "Android Developer"
+        "rol": "Android Developer",
+        "Work-Status":"Available to work",
+        "CLang":"Change language:"
     },
     "footer":{
         "CR":"Copyright © All Right Reserved | by Oscar Benites"

@@ -9,7 +9,9 @@
     "profile": {
         "name":"Hola, soy Oscar Benites",
         "me":"Apasionado en el desarrollo movil y escritorio",
-        "rol": "Desarrollador Android"
+        "rol": "Desarrollador Android",
+        "Work-Status":"Disponible para trabajar",
+        "CLang":"Cambiar idioma:"
     },
     "footer":{
         "CR":"Copyright © Casi todos los derechos reservados | Oscar Benites"
