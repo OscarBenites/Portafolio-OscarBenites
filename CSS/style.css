@@ -26,6 +26,9 @@ a,h1,p,h2{
     color: var(--text);
 }
 /* HEADER */
+#menu-icon, #close-icon{
+    color: var(--text);
+}
 .header{  
     position: fixed;
     top: 0;
@@ -103,6 +106,7 @@ a,h1,p,h2{
     margin-top: 80px;
     margin-left: 20%;
     margin-right: 20%;
+
 }
 #BodyTitle{
     height: calc(70vh - 100px);
@@ -278,6 +282,11 @@ footer img{
     margin: 40px auto 0px;
   }
 /* RESPONSIVE */
+@media(max-height: 710px){
+    #BodyTitle{
+        height: calc(120vh - 100px);
+    }
+}
 @media(max-width: 992px){
     .header{
         padding: 1.3rem 5%;
