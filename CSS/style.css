@@ -89,6 +89,8 @@ a,h1,p,h2{
     align-items: center;
     justify-content: center;
     text-align: center;
+    border: solid 2px;
+    border-color: red;
 }
 .flags .CLanguage{
     font-size: 1rem;
@@ -103,19 +105,17 @@ a,h1,p,h2{
     margin-top: 80px;
     margin-left: 20%;
     margin-right: 20%;
-    /*border: solid 2px;
-    border-color: red;*/
 }
 #BodyTitle{
-    height: calc(50vh - 60px);
+    height: calc(70vh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
-    /*border: solid 2px;
-    border-color: blue;*/
+    border: solid 2px;
+    border-color: blue;
 }
 #BodyTitle .FotoPerfil, #BodyTitle .Presentacion, #BodyTitle .Redes{
     margin: 10px 0;
@@ -291,7 +291,7 @@ footer img{
         padding: 1.3rem 5%;
     }
     #ContentMain{
-        margin: 20% 10% 0 10%;
+        margin: 10% 10% 0 10%;
     }
     .flags__item{
         width: 30px;
@@ -301,6 +301,9 @@ footer img{
 @media(max-width: 760px){
     #ContentMain{
         margin: 25% 5% 0 5%;
+    }
+    #BodyTitle{
+        height: calc(80vh - 160px);
     }
     #BodyTitle h1{
         font-size: 30px;
