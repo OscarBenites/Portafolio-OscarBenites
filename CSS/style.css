@@ -119,11 +119,10 @@ a,h1,p,h2{
 }
 #BodyTitle .FotoPerfil, #BodyTitle .Presentacion, #BodyTitle .Redes{
     margin: 10px 0;
-}/*
-section{
-    border: solid 2px;
-    border-color: red;
-}*/
+}
+section h2{
+margin-top: 10%;
+}
 .status-button {
     background-color: #E0FFE0; /* Fondo color verde claro */
     color: #5a7c5a; /* Color del texto verde oscuro */
@@ -362,6 +361,9 @@ footer img{
     .sm-header {
         font-size: 1.2rem;
     }
+    section h2{
+        margin-top: 15%;
+        }
     .footer-item {
         margin-inline: 1rem;
     }
@@ -391,4 +393,7 @@ footer img{
     footer{
         padding-bottom: 1.5rem;
     }
+    section h2{
+        margin-top: 25%;
+        }
 }
