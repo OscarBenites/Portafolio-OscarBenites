@@ -13,6 +13,10 @@
         "Work-Status":"Disponible para trabajar",
         "CLang":"Cambiar idioma:"
     },
+    "Section":{
+        "Collaborating-Title":"¿Te interesa colaborar conmigo?",
+        "Collaborating-Desc":"Siempre estoy abierto a hablar sobre oportunidades laborales o de asociación."
+    },
     "footer":{
         "CR":"Copyright © Casi todos los derechos reservados | Oscar Benites"
     }

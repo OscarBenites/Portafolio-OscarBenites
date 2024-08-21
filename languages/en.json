@@ -13,6 +13,10 @@
         "Work-Status":"Available to work",
         "CLang":"Change language:"
     },
+    "Section":{
+        "Collaborating-Title":"Interested in collaborating with me?",
+        "Collaborating-Desc":"I’m always open to discussing work or partnership opportunities."
+    },
     "footer":{
         "CR":"Copyright © All Right Reserved | by Oscar Benites"
     }

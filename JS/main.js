@@ -115,3 +115,19 @@ const changeLanguage = async (language) => {
 flagsElement.addEventListener("click" , (e)=> {
     changeLanguage(e.target.parentElement.dataset.lenguage);
 });
+
+    // Función para copiar el texto del input
+    document.querySelector(".copy-btn").addEventListener("click", function() {
+        let input = document.querySelector("input.text");
+        input.select();
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+        alert("Correo copiado: " + input.value); // Alerta opcional para confirmar
+    });
+
+    // Función para enviar el correo
+    document.querySelector(".send-btn").addEventListener("click", function() {
+        let input = document.querySelector("input.text");
+        let mailtoLink = "mailto:" + input.value;
+        window.location.href = mailtoLink;
+    });

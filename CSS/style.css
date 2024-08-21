@@ -200,7 +200,7 @@ a,h1,p,h2{
     border: solid 2px;
     border-color: red;
 }*/
-section h2{
+section .SetTitle{
     font-size: 40px;
     padding-top: 10%;
 }
@@ -209,6 +209,76 @@ section h2{
     width: 96px;
     height: 96px;
     border-radius: 48px;
+}
+.Collaborating{
+    text-align: center;
+}
+.Collaborating h1{font-size: 2rem;}
+.Collaborating h2{font-size: 1rem;}
+.sendcopymail{
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-copymail{
+    width: 25em;
+}
+.copy-text{
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+}
+.copy-text input.text{
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    border: none;
+    outline: none;
+    width: 20rem;
+}
+.copy-text button{
+    padding: 10px;
+    margin-right: 5px; 
+    background: #5784f5;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.copy-text button:active{
+    background: #809ce2;
+}
+.copy-text button::before{
+    content: "Copied";
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    background: #5c81dc;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    display: none;
+}
+.copy-text button::after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    background: #5c81dc;
+    transform: rotate(45deg);
+    display: none;
+}
+.copy-text.active button::before,
+.copy-text.active button::after{
+    display: block;
 }
 /* FOOTER */
 footer{
@@ -304,7 +374,7 @@ footer img{
 #rocket{
     border-radius: 50%;
     background-color: var(--ButtomUp);
-    width: 50px;
+    width: 40px;
     padding: 5px;
     margin: 10px auto 0px;
 }
@@ -418,7 +488,7 @@ footer img{
     footer{
         padding-bottom: 1.5rem;
     }
-    section h2{
+    section .SetTitle{
         padding-top: 25%;
     }
 }
