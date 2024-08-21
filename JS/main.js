@@ -1,23 +1,34 @@
+// Función de desplazamiento suave
+function scrollToSection(targetId) {
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+        targetSection.scrollIntoView({
+            behavior: 'smooth' // Desplazamiento suave
+        });
+    }
+}
+
+// Añadir eventos de click a los elementos con la clase "nav-item"
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', function(event) {
         event.preventDefault(); // Evita la recarga de la página
 
         // Obtén el valor del atributo href (el ID de la sección)
         const targetId = this.getAttribute('href').substring(1);
-
-        // Encuentra la sección con ese ID
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-            // Desplázate a la sección
-            targetSection.scrollIntoView({
-                behavior: 'smooth' // Opción para hacer el desplazamiento suave
-            });
-        }
+        scrollToSection(targetId);
     });
 });
 
-// Selecciona los íconos por sus IDs
+// Añadir eventos de click al enlace del cohete
+document.querySelector('#rocket').parentElement.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita la recarga de la página
+
+    // Obtén el valor del atributo href (el ID de la sección)
+    const targetId = this.getAttribute('href').substring(1);
+    scrollToSection(targetId);
+});
+
 // Selecciona el ícono por su ID
 const themeToggleIcon = document.getElementById('theme-ssoggle');
 
