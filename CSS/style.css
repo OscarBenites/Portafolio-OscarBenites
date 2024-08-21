@@ -129,7 +129,6 @@ a,h1,p,h2{
     margin-top: 80px;
     margin-left: 20%;
     margin-right: 20%;
-
 }
 #BodyTitle{
     height: calc(70vh - 100px);
@@ -143,14 +142,36 @@ a,h1,p,h2{
 #BodyTitle .FotoPerfil, #BodyTitle .Presentacion, #BodyTitle .Redes{
     margin: 10px 0;
 }
+.button-redes, .container-redes, .container-cv{
+    margin: 5% 0;
+}
+.button-redes .nav-link{
+    margin: 0 10px;
+}
+.container-cv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.cv-button{
+    background-color: #5c81dc;
+    width: 50%;
+    padding: 10px 5px; /* Espaciado interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 20px; /* Bordes redondeados */
+    text-align: center; /* Centrar el texto */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    position: relative; /* Para controlar la posición de los pseudoelementos */
+}
 .status-button {
-    background-color: #E0FFE0; /* Fondo color verde claro */
-    color: #5a7c5a; /* Color del texto verde oscuro */
+    background-color: #5784f5;/* Fondo color verde claro */
+    color: #04152e; /* Color del texto verde oscuro */
     padding: 10px 20px; /* Espaciado interno */
     border: 2px solid transparent; /* Borde inicialmente transparente */
     border-radius: 20px; /* Bordes redondeados */
     display: inline-block; /* Ajusta al contenido */
-    font-family: Arial, sans-serif; /* Fuente */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center; /* Centrar el texto */
     cursor: pointer; /* Cambia el cursor a pointer */
@@ -166,11 +187,13 @@ a,h1,p,h2{
     right: 0;
     bottom: 0;
     border-radius: 20px; /* Coincide con el border-radius del botón */
-    border: 2px solid #89C289; /* Borde verde oscuro */
+    border: 2px solid #5c81dc; /* Borde verde oscuro */
     opacity: 0;
     animation: border-animate 3s linear infinite; /* Animación infinita */
   }
-  
+  .cv-button{
+    color: var(--text);
+  }
   @keyframes border-animate {
     0% {
       opacity: 1;
@@ -187,7 +210,7 @@ a,h1,p,h2{
   }
   
   .status-button:hover {
-    color: #66A066; /* Color del texto más oscuro al hacer hover */
+    color: #223a5f; /* Color del texto más oscuro al hacer hover */
   }
   
 #BodyTitle h1{
@@ -222,7 +245,7 @@ section .SetTitle{
     align-items: center;
 }
 .container-copymail{
-    width: 25em;
+    width: 25rem;
 }
 .copy-text{
     position: relative;
@@ -241,8 +264,8 @@ section .SetTitle{
     width: 20rem;
 }
 .copy-text button{
-    padding: 10px;
-    margin-right: 5px; 
+    padding: 9px;
+    margin: 0 5px; 
     background: #5784f5;
     color: #fff;
     font-size: 18px;
@@ -257,8 +280,6 @@ section .SetTitle{
 .copy-text button::before{
     content: "Copied";
     position: absolute;
-    top: -50px;
-    right: 0px;
     background: #5c81dc;
     padding: 8px 10px;
     border-radius: 20px;
@@ -268,8 +289,6 @@ section .SetTitle{
 .copy-text button::after{
     content: "";
     position: absolute;
-    top: -20px;
-    right: 25px;
     width: 10px;
     height: 10px;
     background: #5c81dc;
@@ -362,12 +381,13 @@ footer img{
 .nav-link:hover i.fa-instagram {
   color: #ea4c89;
 }
-.nav-link:hover i.fa-youtube {
+.nav-link:hover i.fa-youtube, .nav-link:hover i.fa-envelope {
   color: #dd4b39;
 }
 .nav-link:hover i.fa-linkedin-in {
   color: #0077b5;
 }
+
 .rcredits{
     margin: 40px auto 0px;
   }
@@ -381,7 +401,7 @@ footer img{
 /* RESPONSIVE */
 @media(max-height: 710px){
     #BodyTitle{
-        height: calc(120vh - 100px);
+        height: calc(160vh - 160px);
     }
 }
 @media(max-width: 992px){
@@ -462,8 +482,17 @@ footer img{
     .footer-item {
         margin-inline: 1rem;
     }
+    .container-copymail{
+        width: 20rem;
+    }
+    .copy-text input.text{
+        font-size: 13px;
+    }
 }
 @media(max-width: 576px){
+    #BodyTitle{
+        height: calc(170vh - 170px);
+    }
     .line{
         width: 2rem;
         margin-left: .5rem;

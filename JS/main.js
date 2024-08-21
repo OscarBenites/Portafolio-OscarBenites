@@ -122,7 +122,7 @@ flagsElement.addEventListener("click" , (e)=> {
         input.select();
         document.execCommand("copy");
         window.getSelection().removeAllRanges();
-        alert("Correo copiado: " + input.value); // Alerta opcional para confirmar
+        //alert("Correo copiado: " + input.value); // Alerta opcional para confirmar
     });
 
     // Función para enviar el correo
