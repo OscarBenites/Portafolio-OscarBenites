@@ -491,7 +491,7 @@ footer img{
 }
 @media(max-width: 576px){
     #BodyTitle{
-        height: calc(170vh - 170px);
+        height: calc(70vh - 120px);
     }
     .line{
         width: 2rem;
@@ -519,5 +519,10 @@ footer img{
     }
     section .SetTitle{
         padding-top: 25%;
+    }
+    @media(max-width: 416px){
+        #BodyTitle{
+            height: calc(90vh - 120px);
+        }
     }
 }
