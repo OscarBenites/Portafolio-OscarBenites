@@ -1,10 +1,22 @@
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', function(event) {
-      event.preventDefault(); // Evita la recarga de la página
-      // Lógica adicional aquí si necesitas
-      console.log("Item del navbar clickeado");
+        event.preventDefault(); // Evita la recarga de la página
+
+        // Obtén el valor del atributo href (el ID de la sección)
+        const targetId = this.getAttribute('href').substring(1);
+
+        // Encuentra la sección con ese ID
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            // Desplázate a la sección
+            targetSection.scrollIntoView({
+                behavior: 'smooth' // Opción para hacer el desplazamiento suave
+            });
+        }
     });
-  });
+});
+
 // Selecciona los íconos por sus IDs
 // Selecciona el ícono por su ID
 const themeToggleIcon = document.getElementById('theme-ssoggle');
