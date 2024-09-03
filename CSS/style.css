@@ -232,6 +232,66 @@ section .SetTitle{
     text-align: center;
     margin: 10px 0;
 }
+/* EDUCATION */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #ccc;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    margin: 20px 0;
+    padding-left: 60px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00a9d9;
+    top: 0;
+    left: 30px;
+    margin-top: 10px;
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.timeline-content h4 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.timeline-content span {
+    display: block;
+    font-size: 0.9em;
+    color: #999;
+}
+
+.timeline-content p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #555;
+}
 /* CONTACT ME*/
 .Perfil-IMG{
     width: 96px;
@@ -366,6 +426,7 @@ footer img{
   align-items: center;
   pointer-events: none;
   flex-wrap: nowrap;
+  margin-bottom: 4%;
 }
 .nav-footer:hover {
   pointer-events: auto;
@@ -542,6 +603,9 @@ footer img{
     }
     .rcredits{
         margin: 40px auto;
+    }
+    .nav-footer{
+        margin-bottom: 15%;
     }
     .nav-footer .footer-item {
         opacity: 1;
