@@ -109,6 +109,7 @@ a,h1,p,h2{
 }
 /* FLAGS */
 .flags{
+    color: var(--text);
     margin-top: .8rem;
     display: flex;
     flex-direction: column;
@@ -232,6 +233,12 @@ section .SetTitle{
     text-align: center;
     margin: 10px 0;
 }
+.intro-text {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
 /* EDUCATION */
 .timeline {
     position: relative;
@@ -583,6 +590,9 @@ footer img{
     .sm-header {
         font-size: 1rem;
     }
+    .intro-text {
+        font-size: 24px;
+      }
     .footer-item {
         margin-inline: 1rem;
     }

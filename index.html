@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./CSS/style.css">
         <link href='https://fonts.googleapis.com/css?family=Figtree' rel='stylesheet'>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
         <title>OscarBenites | Portfolio</title>
     </head>
     <!-- *********************************************
@@ -77,21 +78,82 @@
                         </div>
                     </div>
                 </section>
-                <section id="AboutMe">
+                <section id="AboutMe" class="about-section">
                     <h2 class="SetTitle"><i class='bx bx-user'></i> <a class="SetTitle" data-section="navbar" data-value="About">Sobre mí</a></h2>
-                    <p data-section="Section" data-value="AboutMe-Hi">Hola, encantado de conocerte.</p>
+                    <p data-section="Section" data-value="AboutMe-Hi" class="intro-text">Hola, encantado de conocerte.</p>
                     <p data-section="Section" data-value="AboutMe-Desc">Soy una persona tranquila, seguro de mí mismo, curioso por naturaleza, autodidacta, responsable y comprometido con mi trabajo, siempre estoy trabajando para mejorar mis habilidades.</p>
                 </section>
                 <section id="Projects">
                     <h2 class="SetTitle"><i class='bx bx-code-alt'></i> <a class="SetTitle" data-section="navbar" data-value="Projects">Proyectos</a></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque esse voluptates totam nobis perferendis et hic, laboriosam consequatur vel, illum labore quo beatae excepturi suscipit. Minus soluta corporis deserunt iste.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit..</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque esse voluptates totam nobis perferendis et hic, laboriosam consequatur vel, illum labore quo beatae excepturi suscipit. Minus soluta corporis deserunt iste.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit..</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque esse voluptates totam nobis perferendis et hic, laboriosam consequatur vel, illum labore quo beatae excepturi suscipit. Minus soluta corporis deserunt iste.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit..</p>
+                    <div class="container mx-auto py-8 px-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          
+                          <!-- Primer Proyecto -->
+                          <div class="bg-white-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="./img/ComingSoonExtension.png" alt="SVG Logos" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                              <h2 class="text-xl font-semibold">Google Extension - En Desarrollo</h2>
+                              <div class="flex items-center space-x-2 my-2">
+                                <span class="bg-yellow-300 text-xs px-2 py-1 rounded"><i class='bx bxl-java'></i> JavaScript</span>
+                                <span class="bg-teal-500 text-xs px-2 py-1 rounded">HTML + CSS</span>
+                              </div>
+                              <p class="text-gray-400 text-sm">
+                                Extensión para reemplazo de texto mediante comando con prefijo, configurable mediante el panel del website.
+                              </p>
+                              <div class="flex space-x-4 mt-4">
+                                <a href="https://github.com/OscarBenites/FreeText" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
+                                  <span><i class="fab fa-github"></i> Código</span>
+                                </a>
+                                <a href="#" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
+                                  <span><i class='bx bx-link-alt'></i> Previsualizar</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primer Proyecto -->
+                          <!-- Segundo Proyecto -->
+                          <div class="bg-white-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="./img/ComingSoonDiscord.png" alt="AdventJS" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                              <h2 class="text-xl font-semibold">Bot Discord - En Desarrollo</h2>
+                              <div class="flex items-center space-x-2 my-2">
+                                <span class="bg-yellow-300 text-xs px-2 py-1 rounded"><i class='bx bxl-java'></i> JavaScript</span>
+                                <span class="bg-teal-500 text-xs px-2 py-1 rounded">JSON + NODEJS</span>
+                              </div>
+                              <p class="text-gray-400 text-sm">
+                                BOT de moderación y utilidad para canales o servidores Discord.
+                              </p>
+                              <div class="flex space-x-4 mt-4">
+                                <a href="#" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
+                                  <span><i class='bx bx-link-alt'></i> Previsualizar</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundo Proyecto -->
+                          <!-- Tercer Proyecto -->
+                          <div class="bg-white-800 rounded-lg overflow-hidden shadow-lg">
+                            <img src="./img/ComingSoonAndroid.png" alt="AdventJS" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                              <h2 class="text-xl font-semibold">Agenda - En Desarrollo</h2>
+                              <div class="flex items-center space-x-2 my-2">
+                                <span class="bg-green-300 text-xs px-2 py-1 rounded"><i class='bx bxl-android' ></i> Kotlin</span>
+                                <span class="bg-teal-500 text-xs px-2 py-1 rounded">Java</span>
+                              </div>
+                              <p class="text-gray-400 text-sm">
+                                Gestión y organización academica, calculo y promedio de notas, horario, apuntes, recordatorios.
+                              </p>
+                              <div class="flex space-x-4 mt-4">
+                                <a href="#" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
+                                  <span><i class='bx bx-link-alt'></i> Previsualizar</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Tercer Proyecto -->
+                    
+                        </div>
+                      </div>
                 </section>
                 <section id="Education">
                     <h2 class="SetTitle"><i class='bx bx-book-bookmark'></i> <a class="SetTitle" data-section="navbar" data-value="Education">Educación</a></h2>
