@@ -6,6 +6,7 @@
     --barbackground: rgba(30,30,30, 0.9);
     --console: #000;
     --text: #fff;
+    --text2: #000;
     --ButtomUp: rgb(30,30,30);
 }
 
@@ -15,6 +16,7 @@
     --barbackground: rgba(236, 236, 247, 0.9);
     --console: #fff;
     --text: #000;
+    --text2: #fff;
     --ButtomUp: #000;
 }
 *{margin: 0;padding: 0;box-sizing: border-box;font-family: Figtree, sans-serif;}
@@ -22,7 +24,7 @@ body{
     height: 100px;
     background: var(--background);   
 }
-a,h1,p,h2{
+a,h1,p,h2,span{
     text-decoration: none;
     color: var(--text);
 }
@@ -240,13 +242,16 @@ section .SetTitle{
   }
   
 /* EDUCATION */
+#Education h3, #Education p, #Education h4{
+    text-decoration: none;
+    color: var(--text);
+}
 .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
     padding: 0;
 }
-
 .timeline::before {
     content: '';
     position: absolute;
@@ -299,6 +304,14 @@ section .SetTitle{
     font-size: 1em;
     color: #555;
 }
+.hover-effect:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
+  }
+  
+  img {
+    transition: transform 0.3s ease-in-out; /* Duración y suavidad del zoom */
+  }
+  
 /* CONTACT ME*/
 .Perfil-IMG{
     width: 96px;
