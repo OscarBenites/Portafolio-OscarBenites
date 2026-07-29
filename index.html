@@ -201,27 +201,43 @@
           <svg id="iconMoon" class="w-2.5 h-2.5 text-white hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
         </span>
       </button>
-
-      <!-- Botón hamburguesa (solo móvil) -->
-      <button id="menuToggle" type="button" aria-label="Abrir menú" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-brd">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
     </div>
   </div>
 </header>
 
-<!-- Drawer móvil -->
-<div id="mobileDrawer" class="drawer fixed top-16 right-0 bottom-0 w-72 max-w-[80%] z-40 bg-surface border-l border-brd transition-transform duration-300 md:hidden shadow-soft">
-  <nav class="flex flex-col p-6 gap-5 text-base font-medium">
-    <a href="#sobre-mi"  class="mobile-link" data-i18n="nav_about">Sobre mí</a>
-    <a href="#skills"    class="mobile-link" data-i18n="nav_skills">Skills</a>
-    <a href="#proyectos" class="mobile-link" data-i18n="nav_projects">Proyectos</a>
-    <a href="#educacion" class="mobile-link" data-i18n="nav_education">Educación</a>
-    <a href="#contacto"  class="mobile-link" data-i18n="nav_contact">Contacto</a>
-  </nav>
-</div>
-<!-- Overlay oscuro detrás del drawer -->
-<div id="drawerOverlay" class="fixed inset-0 bg-black/40 z-30 hidden md:hidden"></div>
+<!-- ========================================================================
+     BOTTOM NAV — barra flotante de navegación (solo móvil)
+     En desktop se usa el header superior; en móvil el header solo
+     conserva logo + idioma + tema, y esta barra asume la navegación
+     por secciones para evitar amontonamiento.
+     Para agregar un ítem: copia un <a class="bottom-nav-link"> y ajusta
+     su href, ícono y data-i18n.
+========================================================================= -->
+<nav id="bottomNav" aria-label="Navegación por secciones"
+     class="md:hidden fixed bottom-4 inset-x-4 z-40 glass border border-brd rounded-2xl shadow-soft">
+  <div class="flex items-stretch justify-between px-2 py-2">
+    <a href="#inicio" class="bottom-nav-link" data-section="inicio">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+      <span data-i18n="nav_home">Inicio</span>
+    </a>
+    <a href="#sobre-mi" class="bottom-nav-link" data-section="sobre-mi">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      <span data-i18n="nav_about">Sobre mí</span>
+    </a>
+    <a href="#skills" class="bottom-nav-link" data-section="skills">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-5 6 5 6M16 6l5 6-5 6"/></svg>
+      <span data-i18n="nav_skills">Skills</span>
+    </a>
+    <a href="#proyectos" class="bottom-nav-link" data-section="proyectos">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span data-i18n="nav_projects">Proyectos</span>
+    </a>
+    <a href="#contacto" class="bottom-nav-link" data-section="contacto">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+      <span data-i18n="nav_contact">Contacto</span>
+    </a>
+  </div>
+</nav>
 
 <main>
 <!-- ========================================================================
@@ -256,6 +272,12 @@
       <div class="flex flex-wrap items-center gap-4 mt-8">
         <a href="#proyectos" class="px-6 py-3 rounded-xl bg-accent text-white font-medium text-sm hover:bg-accent2 transition-colors shadow-soft" data-i18n="hero_cta_projects">Ver Proyectos</a>
         <a href="#contacto" class="px-6 py-3 rounded-xl border border-brd font-medium text-sm hover:border-accent2 hover:text-accent2 transition-colors" data-i18n="hero_cta_contact">Contactar</a>
+        <!-- Botón de descarga de CV: coloca tu archivo "CV-OscarBenites.pdf" junto a este index.html -->
+        <a href="CV-OscarBenites.pdf" download="CV-OscarBenites.pdf"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-accent2 text-accent2 font-medium text-sm hover:bg-accent2 hover:text-white transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          <span data-i18n="hero_cta_cv">Descargar CV (PDF)</span>
+        </a>
       </div>
 
       <!-- Redes sociales -->
@@ -321,7 +343,26 @@
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_languages">Lenguajes</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="badge">Kotlin</span><span class="badge">Dart</span><span class="badge">Swift</span><span class="badge">Java</span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#7F52FF15;color:#7F52FF">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16L12 12l8 8H4V4Z"/></svg>
+            </span>Kotlin
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#0175C215;color:#0175C2">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h9l7 7v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm9 0v7h7"/></svg>
+            </span>Dart
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#FA734315;color:#FA7343">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c5 4 11 4 16 0-4 6-12 6-16 0Z"/><path d="M6 13C4 8 7 3 12 2c1 3-1 6-4 7"/></svg>
+            </span>Swift
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#E76F0015;color:#E76F00">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 10h9v4a4.5 4.5 0 0 1-4.5 4.5H10A4.5 4.5 0 0 1 5.5 14V10Z"/><path d="M15 11h1.5a2.5 2.5 0 0 1 0 5H15"/><path d="M8 21h6"/></svg>
+            </span>Java
+          </span>
         </div>
       </div>
 
@@ -329,7 +370,21 @@
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.05s">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_frameworks">Frameworks &amp; UI</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="badge">Flutter</span><span class="badge">Jetpack Compose</span><span class="badge">SwiftUI</span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#02569B15;color:#02569B">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2 4 12l4 4 14-14h-8Z"/><path d="m14 22 8-8-4-4-8 8 4 4Z"/></svg>
+            </span>Flutter
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#3DDC8415;color:#1E8E5C">
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="9" r="1.4"/><circle cx="16" cy="9" r="1.4"/><path d="M5 10a7 7 0 0 1 14 0v6a1 1 0 0 1-1 1h-1v2.5a1.5 1.5 0 0 1-3 0V17h-2v2.5a1.5 1.5 0 0 1-3 0V17H8v2.5a1.5 1.5 0 0 1-3 0V17H6a1 1 0 0 1-1-1v-6Z"/></svg>
+            </span>Jetpack Compose
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#FA734315;color:#FA7343">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="9" r="5"/><circle cx="15" cy="15" r="5" opacity=".55"/></svg>
+            </span>SwiftUI
+          </span>
         </div>
       </div>
 
@@ -337,7 +392,31 @@
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.1s">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_backend">Backend &amp; DB</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="badge">Firebase</span><span class="badge">REST APIs</span><span class="badge">SQLite</span><span class="badge">Hive</span><span class="badge">Room</span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#FFA00015;color:#F57C00">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2 3.5 1 5-.5 6.5C10 10 9 12 10 14a4 4 0 0 0 4 4c2.5 0 5-2 5-5 0-1.5-.5-3-2-4.5.5 2-.5 3-1.5 3.5.5-3-1-6-3.5-10Z"/></svg>
+            </span>Firebase
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#64748B15;color:#475569">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5"/><path d="M20 12a8 8 0 0 1-14 5"/><path d="m14 3 4 4-4 4M10 21l-4-4 4-4"/></svg>
+            </span>REST APIs
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#003B5715;color:#003B57">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+            </span>SQLite
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#F5A62315;color:#C77800">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 6.5v11L12 22l8-4.5v-11L12 2Zm0 2.3 6 3.4-6 3.4-6-3.4 6-3.4Z"/></svg>
+            </span>Hive
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#4CAF5015;color:#2E7D32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><circle cx="7.5" cy="7" r=".8" fill="currentColor" stroke="none"/><circle cx="7.5" cy="17" r=".8" fill="currentColor" stroke="none"/></svg>
+            </span>Room
+          </span>
         </div>
       </div>
 
@@ -345,7 +424,31 @@
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.15s">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_practices">Buenas Prácticas</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="badge">Clean Architecture</span><span class="badge">BLoC</span><span class="badge">Provider</span><span class="badge">MVVM</span><span class="badge">Git / GitHub</span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#64748B15;color:#475569">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
+            </span>Clean Architecture
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#3B82F615;color:#2563EB">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h11M4 12h16M4 18h8"/><path d="m17 15 3 3-3 3"/></svg>
+            </span>BLoC
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#4CAF5015;color:#2E7D32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M12 9 7 21M12 9l5 12M12 9 8 15M12 9l4 6"/></svg>
+            </span>Provider
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#818CF815;color:#4F46E5">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M6 9v3h12V9M12 12v3"/></svg>
+            </span>MVVM
+          </span>
+          <span class="badge">
+            <span class="skill-icon" style="background:#F0503315;color:#F05033">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="16" cy="12" r="2.2"/><path d="M6 8.2V15.8M8 12h6M6 15.8c0-3.5 2-5.5 8-5.5"/></svg>
+            </span>Git / GitHub
+          </span>
         </div>
       </div>
 
@@ -458,22 +561,40 @@
         <p class="text-muted text-xs font-mono mt-1">2014 — 2018 · Callao</p>
       </div>
 
-      <div class="reveal relative timeline-dot" style="transition-delay:.1s">
+      <div class="reveal relative timeline-dot cert-item" style="transition-delay:.1s"
+           data-cert-title="Certificado — Power BI" data-cert-org="Lima Educa · Perú Digital · Sep–Oct 2024 · 8h"
+           data-cert-img="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
         <h3 class="font-display font-semibold" data-i18n="edu_cert1">Certificado — Power BI</h3>
         <p class="text-accent2 text-sm font-medium mt-0.5">Lima Educa · Perú Digital</p>
         <p class="text-muted text-xs font-mono mt-1">Sep — Oct 2024 · 8h</p>
+        <span class="cert-view-hint">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span data-i18n="cert_view">Ver certificado</span>
+        </span>
       </div>
 
-      <div class="reveal relative timeline-dot" style="transition-delay:.15s">
+      <div class="reveal relative timeline-dot cert-item" style="transition-delay:.15s"
+           data-cert-title="Certificado — Excel 2016 Básico Online" data-cert-org="Cibertec · Dic 2024 – Ene 2025 · 32h"
+           data-cert-img="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
         <h3 class="font-display font-semibold" data-i18n="edu_cert2">Certificado — Excel 2016 Básico Online</h3>
         <p class="text-accent2 text-sm font-medium mt-0.5">Cibertec</p>
         <p class="text-muted text-xs font-mono mt-1">Dic 2024 — Ene 2025 · 32h</p>
+        <span class="cert-view-hint">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span data-i18n="cert_view">Ver certificado</span>
+        </span>
       </div>
 
-      <div class="reveal relative timeline-dot" style="transition-delay:.2s">
+      <div class="reveal relative timeline-dot cert-item" style="transition-delay:.2s"
+           data-cert-title="Certificado — Fundamentos de Programación y Tecnologías de la Información" data-cert-org="Cibertec · Mar 2019 – Feb 2020 · 32h"
+           data-cert-img="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
         <h3 class="font-display font-semibold" data-i18n="edu_cert3">Certificado — Fundamentos de Programación y Tecnologías de la Información</h3>
         <p class="text-accent2 text-sm font-medium mt-0.5">Cibertec</p>
         <p class="text-muted text-xs font-mono mt-1">Mar 2019 — Feb 2020 · 32h</p>
+        <span class="cert-view-hint">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span data-i18n="cert_view">Ver certificado</span>
+        </span>
       </div>
 
     </div>
@@ -527,6 +648,21 @@
   </div>
   <p class="text-center text-muted text-xs font-mono mt-8" data-i18n="footer_copy">Copyright © All Right Reserved | by Oscar Benites</p>
 </footer>
+
+<!-- ========================================================================
+     BOTÓN FLOTANTE "VOLVER ARRIBA" (cohete)
+     Aparece solo tras hacer scroll hacia abajo. En móvil se posiciona por
+     encima del bottom nav; en desktop va en la esquina inferior derecha.
+========================================================================= -->
+<button id="backToTop" type="button" aria-label="Volver arriba"
+  class="fixed right-5 bottom-24 md:bottom-6 z-40 w-12 h-12 squircle bg-accent text-white flex items-center justify-center shadow-soft opacity-0 translate-y-3 pointer-events-none transition-all duration-300 hover:bg-accent2">
+  <!-- Ícono de cohete -->
+  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2c2.5 2 4 5.5 4 9 0 2-1 4-1 4H9s-1-2-1-4c0-3.5 1.5-7 4-9Z"/>
+    <path d="M9 15l-3 3 1 3 3-3M15 15l3 3-1 3-3-3"/>
+    <circle cx="12" cy="10" r="1.6" fill="currentColor" stroke="none"/>
+  </svg>
+</button>
 
 <!-- ========================================================================
      MODAL — Más proyectos
@@ -596,13 +732,60 @@
 </div>
 
 <!-- ========================================================================
+     MODAL — Vista previa de certificado
+     Se rellena dinámicamente por JS a partir de los atributos
+     data-cert-title / data-cert-org / data-cert-img de cada .cert-item.
+========================================================================= -->
+<div id="certModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/60 transition-opacity duration-300">
+  <div class="modal-panel relative w-full max-w-lg max-h-[85vh] overflow-y-auto bg-surface border border-brd rounded-3xl p-5 sm:p-6 shadow-soft transition-all duration-300">
+    <div class="flex items-center justify-between mb-4">
+      <h3 id="certModalTitle" class="font-display font-semibold text-base pr-4">Certificado</h3>
+      <button id="closeCertModal" type="button" aria-label="Cerrar" class="w-9 h-9 shrink-0 flex items-center justify-center rounded-full hover:bg-surface-2 transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="rounded-2xl overflow-hidden border border-brd">
+      <img id="certModalImg" src="" alt="Vista previa del certificado" class="w-full h-auto object-contain bg-surface-2">
+    </div>
+    <p id="certModalOrg" class="text-muted text-xs font-mono mt-3"></p>
+  </div>
+</div>
+
+<!-- ========================================================================
      UTILIDADES TAILWIND REUTILIZABLES (componentes)
 ========================================================================= -->
 <style>
   .badge{
     font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:500;
-    padding:.4rem .7rem; border-radius:.6rem; background:var(--surface-2);
+    padding:.35rem .7rem .35rem .35rem; border-radius:.6rem; background:var(--surface-2);
     border:1px solid var(--border); color:var(--text);
+    display:inline-flex; align-items:center; gap:.45rem;
+  }
+  .skill-icon{
+    width:1.5rem; height:1.5rem; border-radius:.45rem; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .skill-icon svg{ width:.9rem; height:.9rem; }
+
+  /* Bottom nav móvil */
+  .bottom-nav-link{
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.2rem;
+    flex:1; padding:.4rem .2rem; border-radius:.9rem; color:var(--text-muted);
+    font-size:.62rem; font-weight:500; transition:color .2s ease, background-color .2s ease;
+  }
+  .bottom-nav-link.is-active{ color:var(--accent2); background:color-mix(in srgb, var(--accent2) 10%, transparent); }
+
+  /* Botón volver arriba: se activa por JS al hacer scroll (ver sección 7 del script) */
+  #backToTop.is-visible{ opacity:1; transform:translateY(0); pointer-events:auto; }
+
+  /* Certificados clicables */
+  .cert-item{ cursor:pointer; }
+  .cert-item:hover .cert-view-hint{ color:var(--accent2); }
+  .cert-view-hint{ display:inline-flex; align-items:center; gap:.3rem; color:var(--text-muted); font-size:.72rem; font-family:'JetBrains Mono',monospace; margin-top:.4rem; transition:color .2s ease; }
+
+  /* Deja espacio para el bottom nav flotante en móvil */
+  @media (max-width: 767px){
+    body{ padding-bottom:5.5rem; }
   }
   .tech-badge{
     font-family:'JetBrains Mono',monospace; font-size:.65rem; font-weight:500;
@@ -658,6 +841,7 @@
     nav_projects:   { es: 'Proyectos',  en: 'Projects' },
     nav_education:  { es: 'Educación',  en: 'Education' },
     nav_contact:    { es: 'Contacto',   en: 'Contact' },
+    nav_home:       { es: 'Inicio',     en: 'Home' },
 
     hero_available: { es: 'Disponible para trabajar', en: 'Available for work' },
     hero_greeting:  { es: 'Hola, soy', en: "Hi, I'm" },
@@ -666,6 +850,7 @@
                        en: 'Mobile developer focused on building native Android apps with Kotlin and cross-platform experiences with Flutter. Self-taught, curious, and committed to writing clean, maintainable code.' },
     hero_cta_projects: { es: 'Ver Proyectos', en: 'View Projects' },
     hero_cta_contact:  { es: 'Contactar', en: 'Contact Me' },
+    hero_cta_cv:       { es: 'Descargar CV (PDF)', en: 'Download CV (PDF)' },
 
     about_eyebrow: { es: '// sobre mí', en: '// about me' },
     about_title:   { es: 'Encantado de conocerte', en: 'Nice to meet you' },
@@ -702,6 +887,7 @@
     edu_cert1: { es: 'Certificado — Power BI', en: 'Certificate — Power BI' },
     edu_cert2: { es: 'Certificado — Excel 2016 Básico Online', en: 'Certificate — Excel 2016 Basic Online' },
     edu_cert3: { es: 'Certificado — Fundamentos de Programación y Tecnologías de la Información', en: 'Certificate — Programming & IT Fundamentals' },
+    cert_view: { es: 'Ver certificado', en: 'View certificate' },
 
     contact_eyebrow: { es: '// hablemos', en: "// let's talk" },
     contact_title:   { es: '¿Te interesa colaborar conmigo?', en: 'Interested in working together?' },
@@ -732,21 +918,25 @@
   });
 
   /* ---------------------------------------------------------------------
-     3) MENÚ MÓVIL (drawer)
+     3) BOTTOM NAV MÓVIL — resalta el ícono de la sección visible
   --------------------------------------------------------------------- */
-  const menuToggle   = document.getElementById('menuToggle');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const drawerOverlay= document.getElementById('drawerOverlay');
+  const bottomLinks = document.querySelectorAll('.bottom-nav-link');
+  const navSections = ['inicio','sobre-mi','skills','proyectos','contacto']
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
 
-  function toggleDrawer(open){
-    mobileDrawer.classList.toggle('open', open);
-    drawerOverlay.classList.toggle('hidden', !open);
+  function setActiveBottomLink(sectionId){
+    bottomLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('data-section') === sectionId);
+    });
   }
-  menuToggle.addEventListener('click', function(){ toggleDrawer(!mobileDrawer.classList.contains('open')); });
-  drawerOverlay.addEventListener('click', function(){ toggleDrawer(false); });
-  document.querySelectorAll('.mobile-link').forEach(function(link){
-    link.addEventListener('click', function(){ toggleDrawer(false); });
-  });
+
+  const sectionObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) setActiveBottomLink(entry.target.id);
+    });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  navSections.forEach(function(section){ sectionObserver.observe(section); });
 
   /* ---------------------------------------------------------------------
      4) MODAL — Más proyectos
@@ -763,6 +953,35 @@
   closeModalBtn.addEventListener('click', function(){ toggleModal(false); });
   modal.addEventListener('click', function(e){ if (e.target === modal) toggleModal(false); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') toggleModal(false); });
+
+  /* ---------------------------------------------------------------------
+     4.1) MODAL — Vista previa de certificados
+     Lee los data-attributes del .cert-item clicado y rellena el modal.
+     Para agregar un certificado nuevo: añade la clase "cert-item" con
+     data-cert-title / data-cert-org / data-cert-img a su contenedor.
+  --------------------------------------------------------------------- */
+  const certModal    = document.getElementById('certModal');
+  const closeCertBtn  = document.getElementById('closeCertModal');
+  const certModalImg  = document.getElementById('certModalImg');
+  const certModalTitle= document.getElementById('certModalTitle');
+  const certModalOrg  = document.getElementById('certModalOrg');
+
+  function toggleCertModal(open){
+    certModal.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  document.querySelectorAll('.cert-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      certModalTitle.textContent = item.getAttribute('data-cert-title') || 'Certificado';
+      certModalOrg.textContent   = item.getAttribute('data-cert-org') || '';
+      certModalImg.src           = item.getAttribute('data-cert-img') || '';
+      toggleCertModal(true);
+    });
+  });
+  closeCertBtn.addEventListener('click', function(){ toggleCertModal(false); });
+  certModal.addEventListener('click', function(e){ if (e.target === certModal) toggleCertModal(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') toggleCertModal(false); });
 
   /* ---------------------------------------------------------------------
      5) COPIAR CORREO AL PORTAPAPELES
@@ -789,6 +1008,22 @@
     });
   }, { threshold: .15 });
   revealEls.forEach(function(el){ io.observe(el); });
+
+  /* ---------------------------------------------------------------------
+     7) BOTÓN FLOTANTE "VOLVER ARRIBA" (cohete)
+     Aparece tras superar cierto scroll y sube suavemente al hacer clic.
+  --------------------------------------------------------------------- */
+  const backToTop = document.getElementById('backToTop');
+
+  function updateBackToTop(){
+    backToTop.classList.toggle('is-visible', window.scrollY > 420);
+  }
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  updateBackToTop();
+
+  backToTop.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
 })();
 </script>
