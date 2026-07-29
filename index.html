@@ -1,223 +1,797 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="./img/icon.ico">
-        <link rel="stylesheet" href="./CSS/style.css">
-        <link href='https://fonts.googleapis.com/css?family=Figtree' rel='stylesheet'>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-        <title>OscarBenites | Portfolio</title>
-    </head>
-    <!-- *********************************************
-         _   _              _   _                   _
-        | | | | ___ _   _  | |_| |__   ___ _ __ ___| |
-        | |_| |/ _ \ | | | | __| '_ \ / _ \ '__/ _ \ |
-        |  _  |  __/ |_| | | |_| | | |  __/ | |  __/_|
-        |_| |_|\___|\__, |  \__|_| |_|\___|_|  \___(_)
-                    |___/
+<head>
+<!-- ========================================================================
+     META / SEO / OPEN GRAPH
+     Edita título, descripción y URLs cuando publiques el sitio en tu dominio.
+========================================================================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oscar Benites — Mobile Developer | Android &amp; Flutter</title>
+<meta name="description" content="Portafolio de Oscar Benites, desarrollador Mobile especializado en Android nativo (Kotlin) y Flutter. Proyectos, stack técnico y contacto.">
+<meta name="keywords" content="Oscar Benites, Mobile Developer, Android, Flutter, Kotlin, Dart, Swift, Jetpack Compose, Portafolio">
+<meta name="author" content="Oscar Junior Benites Nonato">
+<meta name="theme-color" content="#0F172A">
 
-        Are you checking out the source code?
-        Don't forget to drop me a line or follow me!
-        I'd love to chat and learn new things,
-        whether it's about code, design, cats, or video games.
-        - Oscar Benites
+<!-- Open Graph (WhatsApp / LinkedIn / X preview) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oscar Benites — Mobile Developer">
+<meta property="og:description" content="Desarrollador Mobile especializado en Android (Kotlin) y Flutter. Explora mis proyectos y stack técnico.">
+<meta property="og:image" content="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+<meta property="og:url" content="https://oscarbenites.netlify.app">
+<meta property="og:site_name" content="Oscar Benites — Portafolio">
 
-        ********************************************** -->
-    <body class="preload">
-        <!-- Navigation Bar -->
-        <header class="header">
-            <a href="./index.html" class="logo"><img src="./img/CatLogo.png" alt=""> </a>
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oscar Benites — Mobile Developer">
+<meta name="twitter:description" content="Desarrollador Mobile especializado en Android (Kotlin) y Flutter.">
+<meta name="twitter:image" content="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
 
-        
-            <input type="checkbox" id="check">
-            <label for="check" class="icons">
-                <i class='bx bx-menu' id="menu-icon"></i>
-                <i class='bx bx-x' id="close-icon"></i>
-            </label>
-            <nav class="navbar">
-                <a href="#AboutMe" style="--i:0;" class="nav-item" data-section="navbar" data-value="About">Sobre mí</a>
-                <a href="#Projects" style="--i:1;" class="nav-item" data-section="navbar" data-value="Projects">Projectos</a>
-                <a href="#Education" style="--i:2;" class="nav-item" data-section="navbar" data-value="Education">Educación</a>
-                <a href="#Contact" style="--i:3;" class="nav-item" data-section="navbar" data-value="Contact">Contacto</a>
-                <a href="" style="--i:4;" class="nav-item"><i class='bx bx-sun nav__icon' id="theme-ssoggle"></i></a>
-            </nav>
-        </header>
-        <!-- BodyPage -->
-        <main>
-            <div id="ContentMain">
-                <section id="BodyTitle">                    
-                    <div class="FotoPerfil">
-                        <img src="./img/Perfil.png" alt="Perfil" class="Perfil-IMG">
-                    </div>
-                    <div class="Presentacion">
-                        <h1 class="iam font-bold" data-section="profile" data-value="name">Hola, soy Oscar Benites</h1>
-                        <p data-section="profile" data-value="me">Apasionado por el desarrollo móvil, me encanta lo que hago.
-                            Vivir, aprender y mejorar día a día</p>
-                        <p data-section="profile" data-value="rol">Desarrollador Android</p>
-                    </div>
-                    <div class="Redes">
-                        <div class="status-button" data-section="profile" data-value="Work-Status">Disponible para trabajar</div>
-                        <div class="button-redes">
-                            <div class="container-redes">
-                            <a href="https://github.com/OscarBenites" class="nav-link" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/oscar-benites-8244841a3/" class="nav-link" target="_blank"><i class="fab fa-linkedin-in" target="_blank"></i></a>
-                            </div>
-                            <div class="container-cv">
-                                <div class="cv-button"><a href="./File/CV-OscarBenites2024.pdf" target="_blank">Ver CV</a></div>
-                            </div>
-                        </div>
-                        <div id="flags" class="flags">
-                            <a class="CLanguage" data-section="profile" data-value="CLang">Cambiar idioma:</a>
-                            <div class="flags__item" data-lenguage="es" id="FlagLenguage">
-                                <img src="./img/us-icon.png" alt="" id="IconFlag" style="cursor:pointer" onclick="UpdateIconFlag()">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="AboutMe" class="about-section">
-                    <h2 class="SetTitle"><i class='bx bx-user'></i> <a class="SetTitle" data-section="navbar" data-value="About">Sobre mí</a></h2>
-                    <p data-section="Section" data-value="AboutMe-Hi" class="intro-text">Hola, encantado de conocerte.</p>
-                    <p data-section="Section" data-value="AboutMe-Desc">Soy un desarrollador Junior con una sólida base autodidacta. Mi curiosidad me impulsa a mejorar mis habilidades constantemente, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicación que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo y ver lo que puedo aportar.</p>
-                </section>
-                <section id="Projects">
-                    <h2 class="SetTitle"><i class='bx bx-code-alt'></i> <a class="SetTitle" data-section="navbar" data-value="Projects">Proyectos</a></h2>
-                    <div class="container mx-auto py-8 px-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                          
-                          <!-- Primer Proyecto -->
-                          <div class="bg-white-800 rounded-lg overflow-hidden shadow-lg hover-effect">
-                            <img src="./img/ComingSoonExtension.png" alt="SVG Logos" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                              <h2 class="text-xl font-semibold">Google Extension - En Desarrollo</h2>
-                              <div class="flex items-center space-x-2 my-2">
-                                <span class="bg-yellow-500 text-xs px-2 py-1 rounded"><i class='bx bxl-java'></i> JavaScript</span>
-                                <span class="bg-teal-500 text-xs px-2 py-1 rounded">HTML + CSS</span>
-                              </div>
-                              <p class="text-gray-400 text-sm">
-                                Extensión para reemplazo de texto mediante comando con prefijo, configurable mediante el panel del website.
-                              </p>
-                              <div class="flex space-x-4 mt-4">
-                                <a href="https://github.com/OscarBenites/FreeText" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
-                                  <span><i class="fab fa-github"></i> Código</span>
-                                </a>
-                                <a href="#" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
-                                  <span><i class='bx bx-link-alt'></i> Previsualizar</span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Primer Proyecto -->
-                          <!-- Segundo Proyecto -->
-                          <div class="bg-white-800 rounded-lg overflow-hidden shadow-lg hover-effect">
-                            <img src="./img/ComingSoonDiscord.png" alt="AdventJS" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                              <h2 class="text-xl font-semibold">Bot Discord - En Desarrollo</h2>
-                              <div class="flex items-center space-x-2 my-2">
-                                <span class="bg-yellow-500 text-xs px-2 py-1 rounded"><i class='bx bxl-java'></i> JavaScript</span>
-                                <span class="bg-teal-500 text-xs px-2 py-1 rounded">JSON + NODEJS</span>
-                              </div>
-                              <p class="text-gray-400 text-sm">
-                                BOT de moderación y utilidad para canales o servidores Discord.
-                              </p>
-                              <div class="flex space-x-4 mt-4">
-                                <a href="#" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
-                                  <span><i class='bx bx-link-alt'></i> Previsualizar</span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Segundo Proyecto -->
-                          <!-- Tercer Proyecto -->
-                          <div class="bg-white-800 rounded-lg overflow-hidden shadow-lg hover-effect">
-                            <img src="./img/ComingSoonAndroid.png" alt="AdventJS" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                              <h2 class="text-xl font-semibold">Agenda - En Desarrollo</h2>
-                              <div class="flex items-center space-x-2 my-2">
-                                <span class="bg-green-300 text-xs px-2 py-1 rounded"><i class='bx bxl-android' ></i> Kotlin</span>
-                                <span class="bg-teal-500 text-xs px-2 py-1 rounded">Java</span>
-                              </div>
-                              <p class="text-gray-400 text-sm">
-                                Gestión y organización academica, calculo y promedio de notas, horario, apuntes, recordatorios.
-                              </p>
-                              <div class="flex space-x-4 mt-4">
-                                <a href="#" class="flex items-center bg-white-700 px-4 py-2 rounded text-sm">
-                                  <span><i class='bx bx-link-alt'></i> Previsualizar</span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Tercer Proyecto -->
-                    
-                        </div>
-                      </div>
-                </section>
-                <section id="Education">
-                    <h2 class="SetTitle"><i class='bx bx-book-bookmark'></i> <a class="SetTitle" data-section="navbar" data-value="Education">Educación</a></h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-icon"></div>
-                            <div class="timeline-content">
-                                <h3>Computación e Informática</h3>
-                                <h4>INSTITUTO SUPERIOR TECNOLOGICO CIBERTEC</h4>
-                                <span>2019 - 2022</span>
-                                <p>Técnico – Estudiante. Ciclo V - Tercio superior.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="Contact">
-                    <h2 class="SetTitle"><i class='bx bx-envelope'></i> <a class="SetTitle" data-section="navbar" data-value="Contact">Contacto</a></h2>
-                    <div class="Collaborating">
-                        <h1 data-section="Section" data-value="Collaborating-Title">¿Te interesa colaborar conmigo?</h1>
-                        <h2 data-section="Section" data-value="Collaborating-Desc">Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboración.</h2>
-                    </div>
+<!-- Favicon (squircle "OB" monogram, inline SVG data URI — sin archivos externos) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%231E3A8A' d='M50 0C15 0 0 15 0 50c0 35 15 50 50 50 35 0 50-15 50-50C100 15 85 0 50 0Z'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='bold' font-size='42' fill='white' text-anchor='middle'%3EOB%3C/text%3E%3C/svg%3E">
 
-                    <div class="sendcopymail">
-                        <div class="container-copymail">
-                            <div class="copy-text">
-                                <input type="text" class="text" value="oscar.benites_825@hotmail.com" readonly>
-                                <button class="copy-btn"><i class="fa-regular fa-clone"></i></button>
-                                <button class="send-btn"><i class="fa-regular fa-paper-plane"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-        <footer>
-            <nav class="nav-footer" id="contactme">
-                <h4 class="sm-header" data-section="navbar" data-value="Follow">Sigueme en</h4>
-                <div class="line"></div>
-                <ul class="nav-list">
-                  <li class="footer-item">
-                    <a href="https://github.com/OscarBenites" class="nav-link" target="_blank"><i class="fab fa-github"></i></a>
-                  </li>
-                  <li class="footer-item">
-                    <a href="https://discord.gg/RpR7v52c3U" class="nav-link" target="_blank"><i class="fab fa-discord"></i></a>
-                  </li>
-                  <li class="footer-item">
-                    <a href="#" class="nav-link"><i class="fab fa-instagram" target="_blank"></i></a>
-                  </li>
-                  <li class="footer-item">
-                    <a href="#" class="nav-link"><i class="fab fa-youtube" target="_blank"></i></a>
-                  </li>
-                  <li class="footer-item">
-                    <a href="https://www.linkedin.com/in/oscar-benites-8244841a3/" class="nav-link"><i class="fab fa-linkedin-in" target="_blank"></i></a>
-                  </li>
-                </ul>
-              </nav>
-              <a href="#BodyTitle" id="home-link">
-                <img id="rocket" src="./img/rocket12.png" alt="Rocket">
-                <span class="tooltip">Regresar a Home</span>
-            </a>
-            <a class="rcredits" data-section="footer" data-value="CR">Copyright © All Right Reserved | by Oscar Benites</a>
+<!-- Fuentes: Space Grotesk (display / identidad técnica), Inter (cuerpo), JetBrains Mono (badges y etiquetas de código) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-        </footer>
-        <!-- JavaScript -->
-        <script src="./JS/main.js"></script> 
-    </body>
+<!-- Tailwind CSS vía CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Config de Tailwind: mapeamos utilidades a variables CSS para que el
+  // modo oscuro/claro funcione cambiando solo la clase `.dark` en <html>.
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          bg:      'var(--bg)',
+          surface: 'var(--surface)',
+          surface2:'var(--surface-2)',
+          ink:     'var(--text)',
+          muted:   'var(--text-muted)',
+          accent:  'var(--accent)',
+          accent2: 'var(--accent-2)',
+          brd:     'var(--border)',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body:    ['"Inter"', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'monospace'],
+        },
+        borderRadius: { squircle: '42% 58% 55% 45% / 45% 42% 58% 55%' },
+        boxShadow: {
+          soft: '0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -8px rgba(15,23,42,0.10)',
+          softDark: '0 1px 2px rgba(0,0,0,0.2), 0 8px 30px -8px rgba(0,0,0,0.55)',
+        },
+        keyframes: {
+          float: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-10px)' } },
+          fadeIn: { '0%': { opacity: 0, transform: 'scale(.96)' }, '100%': { opacity: 1, transform: 'scale(1)' } },
+          rise:   { '0%': { opacity: 0, transform: 'translateY(16px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+        },
+        animation: {
+          float: 'float 5s ease-in-out infinite',
+          fadeIn: 'fadeIn .25s ease-out',
+          rise: 'rise .6s ease-out both',
+        }
+      }
+    }
+  }
+</script>
+
+<!-- ========================================================================
+     ESTILOS BASE / VARIABLES DE TEMA
+========================================================================= -->
+<style>
+  :root{
+    --bg:#F8FAFC; --surface:#FFFFFF; --surface-2:#F1F5F9;
+    --text:#0F172A; --text-muted:#475569;
+    --accent:#1E3A8A; --accent-2:#4F46E5; --border:#E2E8F0;
+  }
+  .dark{
+    --bg:#0B1120; --surface:#111827; --surface-2:#0F172A;
+    --text:#E5E9F1; --text-muted:#94A3B8;
+    --accent:#3B82F6; --accent-2:#818CF8; --border:#1E293B;
+  }
+  html{ scroll-behavior:smooth; }
+  body{ background-color:var(--bg); color:var(--text); transition:background-color .3s ease, color .3s ease; }
+  ::selection{ background:var(--accent); color:#fff; }
+
+  /* Squircle: forma "ícono de app" — motivo visual recurrente que identifica
+     el perfil Mobile (avatar, thumbnails de proyecto, insignias). */
+  .squircle{ clip-path:url(#squirclePath); }
+
+  /* Header con efecto glass */
+  .glass{
+    background-color: color-mix(in srgb, var(--surface) 72%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  /* Scrollbar sutil */
+  ::-webkit-scrollbar{ width:10px; }
+  ::-webkit-scrollbar-track{ background:transparent; }
+  ::-webkit-scrollbar-thumb{ background:var(--border); border-radius:99px; }
+
+  /* Reveal on scroll */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+  /* Respeta preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  /* Foco de teclado visible (accesibilidad) */
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2px solid var(--accent-2); outline-offset:3px; border-radius:6px;
+  }
+
+  /* Toggle de tema: pista + perilla */
+  .theme-knob{ transform:translateX(0); }
+  .dark .theme-knob{ transform:translateX(20px); }
+
+  /* Drawer móvil */
+  .drawer{ transform:translateX(100%); }
+  .drawer.open{ transform:translateX(0); }
+
+  /* Modal */
+  .modal-backdrop{ opacity:0; pointer-events:none; }
+  .modal-backdrop.open{ opacity:1; pointer-events:auto; }
+  .modal-panel{ opacity:0; transform:scale(.95) translateY(8px); }
+  .modal-backdrop.open .modal-panel{ opacity:1; transform:scale(1) translateY(0); }
+
+  /* Línea de tiempo de educación */
+  .timeline-dot::before{
+    content:''; position:absolute; left:-27px; top:6px; width:10px; height:10px;
+    border-radius:999px; background:var(--accent-2); box-shadow:0 0 0 4px color-mix(in srgb, var(--accent-2) 25%, transparent);
+  }
+</style>
+</head>
+
+<body class="font-body antialiased bg-bg text-ink">
+
+<!-- Definición SVG global del squircle (reutilizado vía clip-path:url(#squirclePath)) -->
+<svg width="0" height="0" class="absolute">
+  <defs>
+    <clipPath id="squirclePath" clipPathUnits="objectBoundingBox">
+      <path d="M0.5,0 C0.15,0 0,0.15 0,0.5 C0,0.85 0.15,1 0.5,1 C0.85,1 1,0.85 1,0.5 C1,0.15 0.85,0 0.5,0 Z"></path>
+    </clipPath>
+  </defs>
+</svg>
+
+<!-- ========================================================================
+     HEADER / NAV
+========================================================================= -->
+<header class="fixed top-0 inset-x-0 z-40 glass border-b border-brd">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+    <!-- Logo / monograma squircle -->
+    <a href="#inicio" class="flex items-center gap-2.5 shrink-0">
+      <span class="w-9 h-9 squircle bg-accent flex items-center justify-center text-white font-display font-bold text-sm">OB</span>
+      <span class="font-display font-semibold hidden sm:inline">Oscar Benites</span>
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+      <a href="#sobre-mi"  class="hover:text-ink transition-colors" data-i18n="nav_about">Sobre mí</a>
+      <a href="#skills"    class="hover:text-ink transition-colors" data-i18n="nav_skills">Skills</a>
+      <a href="#proyectos" class="hover:text-ink transition-colors" data-i18n="nav_projects">Proyectos</a>
+      <a href="#educacion" class="hover:text-ink transition-colors" data-i18n="nav_education">Educación</a>
+      <a href="#contacto"  class="hover:text-ink transition-colors" data-i18n="nav_contact">Contacto</a>
+    </nav>
+
+    <!-- Controles: idioma, tema, menú móvil -->
+    <div class="flex items-center gap-3">
+
+      <!-- Switch de idioma ES/EN -->
+      <button id="langToggle" type="button"
+        class="font-mono text-xs font-semibold px-2.5 py-1.5 rounded-full border border-brd hover:border-accent2 transition-colors"
+        aria-label="Cambiar idioma">
+        <span id="langLabel">ES</span>
+      </button>
+
+      <!-- Switch de tema oscuro/claro -->
+      <button id="themeToggle" type="button" aria-label="Cambiar tema"
+        class="relative w-11 h-6 rounded-full bg-surface-2 border border-brd flex items-center px-1 shrink-0">
+        <span class="theme-knob w-4 h-4 rounded-full bg-accent transition-transform duration-300 flex items-center justify-center">
+          <!-- Ícono sol (claro) -->
+          <svg id="iconSun" class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+          <!-- Ícono luna (oscuro) -->
+          <svg id="iconMoon" class="w-2.5 h-2.5 text-white hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </span>
+      </button>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button id="menuToggle" type="button" aria-label="Abrir menú" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-brd">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Drawer móvil -->
+<div id="mobileDrawer" class="drawer fixed top-16 right-0 bottom-0 w-72 max-w-[80%] z-40 bg-surface border-l border-brd transition-transform duration-300 md:hidden shadow-soft">
+  <nav class="flex flex-col p-6 gap-5 text-base font-medium">
+    <a href="#sobre-mi"  class="mobile-link" data-i18n="nav_about">Sobre mí</a>
+    <a href="#skills"    class="mobile-link" data-i18n="nav_skills">Skills</a>
+    <a href="#proyectos" class="mobile-link" data-i18n="nav_projects">Proyectos</a>
+    <a href="#educacion" class="mobile-link" data-i18n="nav_education">Educación</a>
+    <a href="#contacto"  class="mobile-link" data-i18n="nav_contact">Contacto</a>
+  </nav>
+</div>
+<!-- Overlay oscuro detrás del drawer -->
+<div id="drawerOverlay" class="fixed inset-0 bg-black/40 z-30 hidden md:hidden"></div>
+
+<main>
+<!-- ========================================================================
+     HERO
+========================================================================= -->
+<section id="inicio" class="relative pt-32 pb-24 px-5 sm:px-8 overflow-hidden">
+
+  <!-- Acentos decorativos de fondo -->
+  <div class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-accent2/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute top-40 -left-24 w-72 h-72 rounded-full bg-accent/10 blur-3xl"></div>
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-[1.15fr_.85fr] gap-14 items-center">
+
+    <!-- Texto -->
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 font-mono text-xs font-medium px-3 py-1.5 rounded-full border border-brd text-accent2 bg-accent2/5">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span data-i18n="hero_available">Disponible para trabajar</span>
+      </span>
+
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mt-5">
+        <span data-i18n="hero_greeting">Hola, soy</span><br>
+        <span class="text-accent2">Oscar Benites</span>
+      </h1>
+
+      <p class="font-mono text-accent font-medium mt-4 text-sm sm:text-base" data-i18n="hero_role">// Mobile Developer · Android &amp; Flutter</p>
+
+      <p class="text-muted mt-5 max-w-xl leading-relaxed" data-i18n="hero_bio">
+        Desarrollador Mobile enfocado en construir aplicaciones Android nativas con Kotlin y experiencias multiplataforma con Flutter. Autodidacta, curioso y comprometido con escribir código limpio y mantenible.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 mt-8">
+        <a href="#proyectos" class="px-6 py-3 rounded-xl bg-accent text-white font-medium text-sm hover:bg-accent2 transition-colors shadow-soft" data-i18n="hero_cta_projects">Ver Proyectos</a>
+        <a href="#contacto" class="px-6 py-3 rounded-xl border border-brd font-medium text-sm hover:border-accent2 hover:text-accent2 transition-colors" data-i18n="hero_cta_contact">Contactar</a>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="flex items-center gap-4 mt-8">
+        <!-- TODO: reemplaza estos href por tus perfiles reales -->
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.98 3.29 9.2 7.86 10.7.57.1.78-.25.78-.55v-2.1c-3.2.7-3.87-1.35-3.87-1.35-.53-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.82 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55 4.56-1.51 7.85-5.73 7.85-10.7C23.02 5.24 18.27.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.98h4.96V23H.5V8.98ZM8.9 8.98h4.76v1.92h.07c.66-1.25 2.29-2.57 4.71-2.57 5.04 0 5.97 3.32 5.97 7.63V23h-4.96v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.28V23H8.9V8.98Z"/></svg>
+        </a>
+        <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Correo electrónico" class="social-icon">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Avatar squircle con motivo "app icon" -->
+    <div class="reveal justify-self-center" style="transition-delay:.1s">
+      <div class="relative w-64 h-64 sm:w-80 sm:h-80 animate-float">
+        <div class="absolute inset-0 squircle bg-gradient-to-br from-accent to-accent2 rotate-6 opacity-20"></div>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+             alt="Foto de perfil de Oscar Benites"
+             loading="lazy"
+             class="relative w-full h-full object-cover squircle border border-brd shadow-soft">
+        <!-- Chip flotante estilo "app icon" -->
+        <span class="absolute -bottom-3 -left-3 squircle w-16 h-16 bg-surface border border-brd shadow-soft flex items-center justify-center">
+          <svg class="w-7 h-7 text-accent2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     SOBRE MÍ
+========================================================================= -->
+<section id="sobre-mi" class="px-5 sm:px-8 py-20 border-t border-brd">
+  <div class="max-w-3xl mx-auto text-center reveal">
+    <span class="font-mono text-xs text-accent2 font-medium" data-i18n="about_eyebrow">// sobre mí</span>
+    <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="about_title">Encantado de conocerte</h2>
+    <p class="text-muted mt-5 leading-relaxed" data-i18n="about_body">
+      Soy técnico en Computación e Informática con una sólida base autodidacta en desarrollo Mobile. Mi curiosidad me impulsa a mejorar constantemente mis habilidades en Android y Flutter, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicación que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo.
+    </p>
+  </div>
+</section>
+
+<!-- ========================================================================
+     SKILLS — Stack Mobile categorizado
+     Para agregar una habilidad nueva: añade un <span> con la clase "badge"
+     dentro de la categoría correspondiente.
+========================================================================= -->
+<section id="skills" class="px-5 sm:px-8 py-20 bg-surface-2/60 border-t border-brd">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal mb-14">
+      <span class="font-mono text-xs text-accent2 font-medium" data-i18n="skills_eyebrow">// stack técnico</span>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="skills_title">Habilidades</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- Categoría: Lenguajes -->
+      <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft">
+        <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_languages">Lenguajes</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge">Kotlin</span><span class="badge">Dart</span><span class="badge">Swift</span><span class="badge">Java</span>
+        </div>
+      </div>
+
+      <!-- Categoría: Frameworks & UI -->
+      <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.05s">
+        <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_frameworks">Frameworks &amp; UI</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge">Flutter</span><span class="badge">Jetpack Compose</span><span class="badge">SwiftUI</span>
+        </div>
+      </div>
+
+      <!-- Categoría: Backend & DB -->
+      <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.1s">
+        <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_backend">Backend &amp; DB</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge">Firebase</span><span class="badge">REST APIs</span><span class="badge">SQLite</span><span class="badge">Hive</span><span class="badge">Room</span>
+        </div>
+      </div>
+
+      <!-- Categoría: Buenas Prácticas -->
+      <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.15s">
+        <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_practices">Buenas Prácticas</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge">Clean Architecture</span><span class="badge">BLoC</span><span class="badge">Provider</span><span class="badge">MVVM</span><span class="badge">Git / GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PROYECTOS
+     Para agregar un proyecto nuevo: copia un <article class="project-card">
+     completo y edita imagen, título, descripción, badges y enlaces.
+========================================================================= -->
+<section id="proyectos" class="px-5 sm:px-8 py-20 border-t border-brd">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal mb-14">
+      <span class="font-mono text-xs text-accent2 font-medium" data-i18n="projects_eyebrow">// trabajo reciente</span>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="projects_title">Proyectos</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Proyecto 1: Google Extension -->
+      <article class="reveal project-card">
+        <div class="relative h-44 squircle-none rounded-2xl overflow-hidden mb-4 border border-brd">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="Google Extension" class="w-full h-full object-cover">
+          <span class="absolute top-3 left-3 text-[11px] font-mono px-2 py-1 rounded-full bg-black/60 text-white" data-i18n="tag_progress">En desarrollo</span>
+        </div>
+        <h3 class="font-display font-semibold">Google Extension</h3>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj1_desc">Extensión de Chrome para reemplazo de texto mediante comandos con prefijo, configurable desde un panel web.</p>
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          <span class="tech-badge">JavaScript</span><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-sm font-medium">
+          <a href="#" class="proj-link" data-i18n="link_github">GitHub</a>
+          <a href="#" class="proj-link" data-i18n="link_demo">Ver Demo</a>
+        </div>
+      </article>
+
+      <!-- Proyecto 2: Bot Discord -->
+      <article class="reveal project-card" style="transition-delay:.05s">
+        <div class="relative h-44 rounded-2xl overflow-hidden mb-4 border border-brd">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="Bot Discord" class="w-full h-full object-cover">
+          <span class="absolute top-3 left-3 text-[11px] font-mono px-2 py-1 rounded-full bg-black/60 text-white" data-i18n="tag_progress">En desarrollo</span>
+        </div>
+        <h3 class="font-display font-semibold">Bot Discord</h3>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj2_desc">Bot de moderación y utilidad para canales y servidores de Discord.</p>
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          <span class="tech-badge">JavaScript</span><span class="tech-badge">Node.js</span><span class="tech-badge">JSON</span>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-sm font-medium">
+          <a href="#" class="proj-link" data-i18n="link_github">GitHub</a>
+          <a href="#" class="proj-link" data-i18n="link_demo">Ver Demo</a>
+        </div>
+      </article>
+
+      <!-- Proyecto 3: Agenda (Android) -->
+      <article class="reveal project-card" style="transition-delay:.1s">
+        <div class="relative h-44 rounded-2xl overflow-hidden mb-4 border border-brd">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="App Agenda Android" class="w-full h-full object-cover">
+          <span class="absolute top-3 left-3 text-[11px] font-mono px-2 py-1 rounded-full bg-black/60 text-white" data-i18n="tag_progress">En desarrollo</span>
+        </div>
+        <h3 class="font-display font-semibold">Agenda</h3>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj3_desc">Gestión y organización académica: cálculo y promedio de notas, horario, apuntes y recordatorios.</p>
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          <span class="tech-badge">Kotlin</span><span class="tech-badge">Java</span><span class="tech-badge">Android SDK</span>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-sm font-medium">
+          <a href="#" class="proj-link" data-i18n="link_apk">APK</a>
+          <a href="#" class="proj-link" data-i18n="link_demo">Ver Demo</a>
+        </div>
+      </article>
+
+      <!-- Tarjeta especial: Ver más proyectos (abre modal) -->
+      <button id="openMoreProjects" type="button"
+        class="reveal group flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-brd hover:border-accent2 transition-colors min-h-[280px] text-center p-8"
+        style="transition-delay:.15s">
+        <span class="w-14 h-14 squircle bg-accent2/10 flex items-center justify-center text-accent2 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+        <span class="font-display font-semibold" data-i18n="more_projects_title">Ver más proyectos</span>
+        <span class="text-muted text-sm" data-i18n="more_projects_sub">Explora 3 proyectos adicionales</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     EDUCACIÓN & CERTIFICACIONES (datos reales del CV)
+========================================================================= -->
+<section id="educacion" class="px-5 sm:px-8 py-20 bg-surface-2/60 border-t border-brd">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center reveal mb-14">
+      <span class="font-mono text-xs text-accent2 font-medium" data-i18n="edu_eyebrow">// formación</span>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="edu_title">Educación &amp; Certificaciones</h2>
+    </div>
+
+    <div class="space-y-8 border-l-2 border-brd pl-8 ml-1">
+
+      <div class="reveal relative timeline-dot">
+        <h3 class="font-display font-semibold">Computación e Informática</h3>
+        <p class="text-accent2 text-sm font-medium mt-0.5">Instituto Superior Tecnológico Cibertec</p>
+        <p class="text-muted text-xs font-mono mt-1">2019 — 2026 · Callao, Bellavista</p>
+        <p class="text-muted text-sm mt-2" data-i18n="edu_cibertec_desc">Técnico – Estudiante. Ciclo V, Tercio Superior.</p>
+      </div>
+
+      <div class="reveal relative timeline-dot" style="transition-delay:.05s">
+        <h3 class="font-display font-semibold" data-i18n="edu_secondary">Secundaria completa</h3>
+        <p class="text-accent2 text-sm font-medium mt-0.5">I.E.P Politécnico Nacional Callao</p>
+        <p class="text-muted text-xs font-mono mt-1">2014 — 2018 · Callao</p>
+      </div>
+
+      <div class="reveal relative timeline-dot" style="transition-delay:.1s">
+        <h3 class="font-display font-semibold" data-i18n="edu_cert1">Certificado — Power BI</h3>
+        <p class="text-accent2 text-sm font-medium mt-0.5">Lima Educa · Perú Digital</p>
+        <p class="text-muted text-xs font-mono mt-1">Sep — Oct 2024 · 8h</p>
+      </div>
+
+      <div class="reveal relative timeline-dot" style="transition-delay:.15s">
+        <h3 class="font-display font-semibold" data-i18n="edu_cert2">Certificado — Excel 2016 Básico Online</h3>
+        <p class="text-accent2 text-sm font-medium mt-0.5">Cibertec</p>
+        <p class="text-muted text-xs font-mono mt-1">Dic 2024 — Ene 2025 · 32h</p>
+      </div>
+
+      <div class="reveal relative timeline-dot" style="transition-delay:.2s">
+        <h3 class="font-display font-semibold" data-i18n="edu_cert3">Certificado — Fundamentos de Programación y Tecnologías de la Información</h3>
+        <p class="text-accent2 text-sm font-medium mt-0.5">Cibertec</p>
+        <p class="text-muted text-xs font-mono mt-1">Mar 2019 — Feb 2020 · 32h</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     CONTACTO
+========================================================================= -->
+<section id="contacto" class="px-5 sm:px-8 py-20 border-t border-brd">
+  <div class="max-w-2xl mx-auto text-center reveal">
+    <span class="font-mono text-xs text-accent2 font-medium" data-i18n="contact_eyebrow">// hablemos</span>
+    <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="contact_title">¿Te interesa colaborar conmigo?</h2>
+    <p class="text-muted mt-3" data-i18n="contact_sub">Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboración.</p>
+
+    <div class="flex items-center justify-center gap-2 mt-8 max-w-md mx-auto bg-surface border border-brd rounded-2xl p-2 pl-5 shadow-soft">
+      <span id="emailText" class="font-mono text-sm text-muted truncate">oscar.benites_825@hotmail.com</span>
+      <button id="copyEmail" type="button" aria-label="Copiar correo" class="ml-auto w-10 h-10 shrink-0 flex items-center justify-center rounded-xl hover:bg-surface-2 transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </button>
+      <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Enviar correo" class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-accent text-white hover:bg-accent2 transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+      </a>
+    </div>
+    <p id="copyFeedback" class="text-emerald-500 text-xs font-mono mt-2 h-4 opacity-0 transition-opacity" data-i18n="contact_copied">¡Correo copiado!</p>
+  </div>
+</section>
+</main>
+
+<!-- ========================================================================
+     FOOTER
+========================================================================= -->
+<footer class="px-5 sm:px-8 py-10 border-t border-brd">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+    <span class="flex items-center gap-2 font-display font-semibold text-sm">
+      <span class="w-7 h-7 squircle bg-accent flex items-center justify-center text-white text-xs font-bold">OB</span>
+      Oscar Benites
+    </span>
+
+    <div class="flex items-center gap-5">
+      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.98 3.29 9.2 7.86 10.7.57.1.78-.25.78-.55v-2.1c-3.2.7-3.87-1.35-3.87-1.35-.53-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.82 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55 4.56-1.51 7.85-5.73 7.85-10.7C23.02 5.24 18.27.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.98h4.96V23H.5V8.98ZM8.9 8.98h4.76v1.92h.07c.66-1.25 2.29-2.57 4.71-2.57 5.04 0 5.97 3.32 5.97 7.63V23h-4.96v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.28V23H8.9V8.98Z"/></svg>
+      </a>
+      <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Correo electrónico" class="social-icon">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="text-center text-muted text-xs font-mono mt-8" data-i18n="footer_copy">Copyright © All Right Reserved | by Oscar Benites</p>
+</footer>
+
+<!-- ========================================================================
+     MODAL — Más proyectos
+========================================================================= -->
+<div id="moreProjectsModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/60 transition-opacity duration-300">
+  <div class="modal-panel relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-surface border border-brd rounded-3xl p-6 sm:p-8 shadow-soft transition-all duration-300">
+
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="font-display font-bold text-xl" data-i18n="modal_title">Más proyectos</h3>
+      <button id="closeMoreProjects" type="button" aria-label="Cerrar" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-2 transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Proyecto extra 1 -->
+      <article class="project-card">
+        <div class="relative h-36 rounded-2xl overflow-hidden mb-4 border border-brd">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="TaskFlow app" class="w-full h-full object-cover">
+        </div>
+        <h4 class="font-display font-semibold">TaskFlow</h4>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj4_desc">App de productividad multiplataforma con tableros de tareas y recordatorios sincronizados.</p>
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          <span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">Provider</span>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-sm font-medium">
+          <a href="#" class="proj-link" data-i18n="link_github">GitHub</a>
+          <a href="#" class="proj-link" data-i18n="link_demo">Ver Demo</a>
+        </div>
+      </article>
+
+      <!-- Proyecto extra 2 -->
+      <article class="project-card">
+        <div class="relative h-36 rounded-2xl overflow-hidden mb-4 border border-brd">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="FitTrack app" class="w-full h-full object-cover">
+        </div>
+        <h4 class="font-display font-semibold">FitTrack</h4>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj5_desc">Seguimiento de rutinas y progreso físico con gráficos locales y persistencia en Room.</p>
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          <span class="tech-badge">Jetpack Compose</span><span class="tech-badge">Room</span><span class="tech-badge">MVVM</span>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-sm font-medium">
+          <a href="#" class="proj-link" data-i18n="link_github">GitHub</a>
+          <a href="#" class="proj-link" data-i18n="link_apk">APK</a>
+        </div>
+      </article>
+
+      <!-- Proyecto extra 3 -->
+      <article class="project-card">
+        <div class="relative h-36 rounded-2xl overflow-hidden mb-4 border border-brd">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="WeatherNow app" class="w-full h-full object-cover">
+        </div>
+        <h4 class="font-display font-semibold">WeatherNow</h4>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj6_desc">Clima en tiempo real por geolocalización, consumiendo una REST API pública.</p>
+        <div class="flex flex-wrap gap-1.5 mt-3">
+          <span class="tech-badge">SwiftUI</span><span class="tech-badge">REST API</span><span class="tech-badge">Swift</span>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-sm font-medium">
+          <a href="#" class="proj-link" data-i18n="link_github">GitHub</a>
+          <a href="#" class="proj-link" data-i18n="link_demo">Ver Demo</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================
+     UTILIDADES TAILWIND REUTILIZABLES (componentes)
+========================================================================= -->
+<style>
+  .badge{
+    font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:500;
+    padding:.4rem .7rem; border-radius:.6rem; background:var(--surface-2);
+    border:1px solid var(--border); color:var(--text);
+  }
+  .tech-badge{
+    font-family:'JetBrains Mono',monospace; font-size:.65rem; font-weight:500;
+    padding:.25rem .55rem; border-radius:999px; background:color-mix(in srgb, var(--accent2) 10%, transparent);
+    color:var(--accent2);
+  }
+  .project-card{ background:var(--surface); border:1px solid var(--border); border-radius:1.25rem; padding:1.1rem; box-shadow:0 1px 2px rgba(15,23,42,.04); }
+  .proj-link{ color:var(--accent2); display:inline-flex; align-items:center; gap:.3rem; }
+  .proj-link:hover{ text-decoration:underline; }
+  .social-icon{ color:var(--text-muted); transition:color .2s ease, transform .2s ease; }
+  .social-icon:hover{ color:var(--accent2); transform:translateY(-2px); }
+  .mobile-link{ color:var(--text); border-bottom:1px solid var(--border); padding-bottom:1rem; }
+</style>
+
+<!-- ========================================================================
+     JAVASCRIPT — Tema, Idioma, Menú móvil, Modal, Copiar correo, Reveal
+========================================================================= -->
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------------------------------------------------------------
+     1) TEMA OSCURO / CLARO — persistente en localStorage
+  --------------------------------------------------------------------- */
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const iconSun = document.getElementById('iconSun');
+  const iconMoon = document.getElementById('iconMoon');
+
+  function applyTheme(theme){
+    html.classList.toggle('dark', theme === 'dark');
+    iconSun.classList.toggle('hidden', theme === 'dark');
+    iconMoon.classList.toggle('hidden', theme !== 'dark');
+    localStorage.setItem('theme', theme);
+  }
+
+  const savedTheme = localStorage.getItem('theme')
+    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener('click', function(){
+    applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+  });
+
+  /* ---------------------------------------------------------------------
+     2) IDIOMA ES / EN — diccionario de traducción + persistencia
+     Para añadir un texto traducible: agrega data-i18n="tuClave" al
+     elemento y su par ES/EN en el objeto `dict` de abajo.
+  --------------------------------------------------------------------- */
+  const dict = {
+    nav_about:      { es: 'Sobre mí',   en: 'About' },
+    nav_skills:     { es: 'Skills',     en: 'Skills' },
+    nav_projects:   { es: 'Proyectos',  en: 'Projects' },
+    nav_education:  { es: 'Educación',  en: 'Education' },
+    nav_contact:    { es: 'Contacto',   en: 'Contact' },
+
+    hero_available: { es: 'Disponible para trabajar', en: 'Available for work' },
+    hero_greeting:  { es: 'Hola, soy', en: "Hi, I'm" },
+    hero_role:      { es: '// Mobile Developer · Android & Flutter', en: '// Mobile Developer · Android & Flutter' },
+    hero_bio:       { es: 'Desarrollador Mobile enfocado en construir aplicaciones Android nativas con Kotlin y experiencias multiplataforma con Flutter. Autodidacta, curioso y comprometido con escribir código limpio y mantenible.',
+                       en: 'Mobile developer focused on building native Android apps with Kotlin and cross-platform experiences with Flutter. Self-taught, curious, and committed to writing clean, maintainable code.' },
+    hero_cta_projects: { es: 'Ver Proyectos', en: 'View Projects' },
+    hero_cta_contact:  { es: 'Contactar', en: 'Contact Me' },
+
+    about_eyebrow: { es: '// sobre mí', en: '// about me' },
+    about_title:   { es: 'Encantado de conocerte', en: 'Nice to meet you' },
+    about_body:    { es: 'Soy técnico en Computación e Informática con una sólida base autodidacta en desarrollo Mobile. Mi curiosidad me impulsa a mejorar constantemente mis habilidades en Android y Flutter, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicación que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo.',
+                     en: "I'm a Computer Science technician with a strong self-taught foundation in mobile development. My curiosity drives me to constantly improve my Android and Flutter skills, while my commitment ensures every project gets the dedication it deserves. If you're looking for someone passionate and eager to learn and grow in a professional environment, I invite you to explore my work." },
+
+    skills_eyebrow:    { es: '// stack técnico', en: '// tech stack' },
+    skills_title:      { es: 'Habilidades', en: 'Skills' },
+    skills_languages:  { es: 'Lenguajes', en: 'Languages' },
+    skills_frameworks: { es: 'Frameworks & UI', en: 'Frameworks & UI' },
+    skills_backend:    { es: 'Backend & DB', en: 'Backend & DB' },
+    skills_practices:  { es: 'Buenas Prácticas', en: 'Best Practices' },
+
+    projects_eyebrow: { es: '// trabajo reciente', en: '// recent work' },
+    projects_title:   { es: 'Proyectos', en: 'Projects' },
+    tag_progress:     { es: 'En desarrollo', en: 'In progress' },
+    proj1_desc: { es: 'Extensión de Chrome para reemplazo de texto mediante comandos con prefijo, configurable desde un panel web.', en: 'Chrome extension for text replacement via prefixed commands, configurable from a web panel.' },
+    proj2_desc: { es: 'Bot de moderación y utilidad para canales y servidores de Discord.', en: 'Moderation and utility bot for Discord channels and servers.' },
+    proj3_desc: { es: 'Gestión y organización académica: cálculo y promedio de notas, horario, apuntes y recordatorios.', en: 'Academic management app: grade averaging, schedule, notes and reminders.' },
+    proj4_desc: { es: 'App de productividad multiplataforma con tableros de tareas y recordatorios sincronizados.', en: 'Cross-platform productivity app with task boards and synced reminders.' },
+    proj5_desc: { es: 'Seguimiento de rutinas y progreso físico con gráficos locales y persistencia en Room.', en: 'Workout and progress tracking with local charts and Room persistence.' },
+    proj6_desc: { es: 'Clima en tiempo real por geolocalización, consumiendo una REST API pública.', en: 'Real-time weather by geolocation, consuming a public REST API.' },
+    link_github: { es: 'GitHub', en: 'GitHub' },
+    link_demo:   { es: 'Ver Demo', en: 'View Demo' },
+    link_apk:    { es: 'APK', en: 'APK' },
+    more_projects_title: { es: 'Ver más proyectos', en: 'See more projects' },
+    more_projects_sub:   { es: 'Explora 3 proyectos adicionales', en: 'Explore 3 additional projects' },
+    modal_title: { es: 'Más proyectos', en: 'More projects' },
+
+    edu_eyebrow: { es: '// formación', en: '// background' },
+    edu_title:   { es: 'Educación & Certificaciones', en: 'Education & Certifications' },
+    edu_cibertec_desc: { es: 'Técnico – Estudiante. Ciclo V, Tercio Superior.', en: 'Technical student. Term V, top academic third.' },
+    edu_secondary: { es: 'Secundaria completa', en: 'High school diploma' },
+    edu_cert1: { es: 'Certificado — Power BI', en: 'Certificate — Power BI' },
+    edu_cert2: { es: 'Certificado — Excel 2016 Básico Online', en: 'Certificate — Excel 2016 Basic Online' },
+    edu_cert3: { es: 'Certificado — Fundamentos de Programación y Tecnologías de la Información', en: 'Certificate — Programming & IT Fundamentals' },
+
+    contact_eyebrow: { es: '// hablemos', en: "// let's talk" },
+    contact_title:   { es: '¿Te interesa colaborar conmigo?', en: 'Interested in working together?' },
+    contact_sub:     { es: 'Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboración.', en: "I'm always open to talk about job opportunities or collaborations." },
+    contact_copied:  { es: '¡Correo copiado!', en: 'Email copied!' },
+
+    footer_copy: { es: 'Copyright © Todos los derechos reservados | por Oscar Benites', en: 'Copyright © All Rights Reserved | by Oscar Benites' },
+  };
+
+  const langToggle = document.getElementById('langToggle');
+  const langLabel  = document.getElementById('langLabel');
+
+  function applyLang(lang){
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] && dict[key][lang]) el.textContent = dict[key][lang];
+    });
+    langLabel.textContent = lang.toUpperCase();
+    html.setAttribute('lang', lang);
+    localStorage.setItem('lang', lang);
+  }
+
+  const savedLang = localStorage.getItem('lang') || 'es';
+  applyLang(savedLang);
+
+  langToggle.addEventListener('click', function(){
+    applyLang(localStorage.getItem('lang') === 'en' ? 'es' : 'en');
+  });
+
+  /* ---------------------------------------------------------------------
+     3) MENÚ MÓVIL (drawer)
+  --------------------------------------------------------------------- */
+  const menuToggle   = document.getElementById('menuToggle');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerOverlay= document.getElementById('drawerOverlay');
+
+  function toggleDrawer(open){
+    mobileDrawer.classList.toggle('open', open);
+    drawerOverlay.classList.toggle('hidden', !open);
+  }
+  menuToggle.addEventListener('click', function(){ toggleDrawer(!mobileDrawer.classList.contains('open')); });
+  drawerOverlay.addEventListener('click', function(){ toggleDrawer(false); });
+  document.querySelectorAll('.mobile-link').forEach(function(link){
+    link.addEventListener('click', function(){ toggleDrawer(false); });
+  });
+
+  /* ---------------------------------------------------------------------
+     4) MODAL — Más proyectos
+  --------------------------------------------------------------------- */
+  const modal      = document.getElementById('moreProjectsModal');
+  const openModalBtn  = document.getElementById('openMoreProjects');
+  const closeModalBtn = document.getElementById('closeMoreProjects');
+
+  function toggleModal(open){
+    modal.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  openModalBtn.addEventListener('click', function(){ toggleModal(true); });
+  closeModalBtn.addEventListener('click', function(){ toggleModal(false); });
+  modal.addEventListener('click', function(e){ if (e.target === modal) toggleModal(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') toggleModal(false); });
+
+  /* ---------------------------------------------------------------------
+     5) COPIAR CORREO AL PORTAPAPELES
+  --------------------------------------------------------------------- */
+  const copyBtn = document.getElementById('copyEmail');
+  const copyFeedback = document.getElementById('copyFeedback');
+  copyBtn.addEventListener('click', function(){
+    navigator.clipboard.writeText('oscar.benites_825@hotmail.com').then(function(){
+      copyFeedback.style.opacity = '1';
+      setTimeout(function(){ copyFeedback.style.opacity = '0'; }, 2000);
+    });
+  });
+
+  /* ---------------------------------------------------------------------
+     6) ANIMACIÓN "REVEAL" AL HACER SCROLL
+  --------------------------------------------------------------------- */
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .15 });
+  revealEls.forEach(function(el){ io.observe(el); });
+
+})();
+</script>
+
+</body>
 </html>
