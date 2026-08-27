@@ -3,7 +3,7 @@
 <head>
 <!-- ========================================================================
      META / SEO / OPEN GRAPH
-     Edita título, descripción y URLs cuando publiques el sitio en tu dominio.
+     Edita titulo, descripcion y URLs cuando publiques el sitio en tu dominio.
 ========================================================================= -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,19 +27,18 @@
 <meta name="twitter:description" content="Desarrollador Mobile especializado en Android (Kotlin) y Flutter.">
 <meta name="twitter:image" content="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
 
-<!-- Favicon (squircle "OB" monogram, inline SVG data URI — sin archivos externos) -->
+<!-- Favicon (squircle "OB" monogram, inline SVG data URI sin archivos externos) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%231E3A8A' d='M50 0C15 0 0 15 0 50c0 35 15 50 50 50 35 0 50-15 50-50C100 15 85 0 50 0Z'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='bold' font-size='42' fill='white' text-anchor='middle'%3EOB%3C/text%3E%3C/svg%3E">
 
-<!-- Fuentes: Space Grotesk (display / identidad técnica), Inter (cuerpo), JetBrains Mono (badges y etiquetas de código) -->
+<!-- Fuentes: Space Grotesk (display / identidad tecnica), Inter (cuerpo), JetBrains Mono (badges y etiquetas de codigo) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- Tailwind CSS vía CDN -->
+<!-- Tailwind CSS via CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  // Config de Tailwind: mapeamos utilidades a variables CSS para que el
-  // modo oscuro/claro funcione cambiando solo la clase `.dark` en <html>.
+  // Config de Tailwind: mapeamos utilidades a variables CSS para dark mode
   tailwind.config = {
     darkMode: 'class',
     theme: {
@@ -97,7 +96,7 @@
   body{ background-color:var(--bg); color:var(--text); transition:background-color .3s ease, color .3s ease; }
   ::selection{ background:var(--accent); color:#fff; }
 
-  /* Squircle: forma "ícono de app" — motivo visual recurrente que identifica
+  /* Squircle: forma "icono de app"  motivo visual recurrente que identifica
      el perfil Mobile (avatar, thumbnails de proyecto, insignias). */
   .squircle{ clip-path:url(#squirclePath); }
 
@@ -131,7 +130,7 @@
   .theme-knob{ transform:translateX(0); }
   .dark .theme-knob{ transform:translateX(20px); }
 
-  /* Drawer móvil */
+  /* Drawer movil */
   .drawer{ transform:translateX(100%); }
   .drawer.open{ transform:translateX(0); }
 
@@ -141,7 +140,7 @@
   .modal-panel{ opacity:0; transform:scale(.95) translateY(8px); }
   .modal-backdrop.open .modal-panel{ opacity:1; transform:scale(1) translateY(0); }
 
-  /* Línea de tiempo de educación */
+  /* Linea de tiempo de educacion */
   .timeline-dot::before{
     content:''; position:absolute; left:-27px; top:6px; width:10px; height:10px;
     border-radius:999px; background:var(--accent-2); box-shadow:0 0 0 4px color-mix(in srgb, var(--accent-2) 25%, transparent);
@@ -151,7 +150,7 @@
 
 <body class="font-body antialiased bg-bg text-ink">
 
-<!-- Definición SVG global del squircle (reutilizado vía clip-path:url(#squirclePath)) -->
+<!-- Definicion SVG global del squircle (reutilizado via clip-path:url(#squirclePath)) -->
 <svg width="0" height="0" class="absolute">
   <defs>
     <clipPath id="squirclePath" clipPathUnits="objectBoundingBox">
@@ -174,14 +173,14 @@
 
     <!-- Nav desktop -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
-      <a href="#sobre-mi"  class="hover:text-ink transition-colors" data-i18n="nav_about">Sobre mí</a>
+      <a href="#sobre-mi"  class="hover:text-ink transition-colors" data-i18n="nav_about">Sobre mi</a>
       <a href="#skills"    class="hover:text-ink transition-colors" data-i18n="nav_skills">Skills</a>
       <a href="#proyectos" class="hover:text-ink transition-colors" data-i18n="nav_projects">Proyectos</a>
-      <a href="#educacion" class="hover:text-ink transition-colors" data-i18n="nav_education">Educación</a>
+      <a href="#educacion" class="hover:text-ink transition-colors" data-i18n="nav_education">Educacion</a>
       <a href="#contacto"  class="hover:text-ink transition-colors" data-i18n="nav_contact">Contacto</a>
     </nav>
 
-    <!-- Controles: idioma, tema, menú móvil -->
+    <!-- Controles: idioma, tema, menú movil -->
     <div class="flex items-center gap-3">
 
       <!-- Switch de idioma ES/EN -->
@@ -195,9 +194,9 @@
       <button id="themeToggle" type="button" aria-label="Cambiar tema"
         class="relative w-11 h-6 rounded-full bg-surface-2 border border-brd flex items-center px-1 shrink-0">
         <span class="theme-knob w-4 h-4 rounded-full bg-accent transition-transform duration-300 flex items-center justify-center">
-          <!-- Ícono sol (claro) -->
+          <!-- icono sol (claro) -->
           <svg id="iconSun" class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
-          <!-- Ícono luna (oscuro) -->
+          <!-- icono luna (oscuro) -->
           <svg id="iconMoon" class="w-2.5 h-2.5 text-white hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
         </span>
       </button>
@@ -206,14 +205,14 @@
 </header>
 
 <!-- ========================================================================
-     BOTTOM NAV — barra flotante de navegación (solo móvil)
-     En desktop se usa el header superior; en móvil el header solo
-     conserva logo + idioma + tema, y esta barra asume la navegación
+     BOTTOM NAV barra flotante de navegacion (solo movil)
+     En desktop se usa el header superior; en movil el header solo
+     conserva logo + idioma + tema, y esta barra asume la navegacion
      por secciones para evitar amontonamiento.
-     Para agregar un ítem: copia un <a class="bottom-nav-link"> y ajusta
-     su href, ícono y data-i18n.
+     Para agregar un item: copia un <a class="bottom-nav-link"> y ajusta
+     su href, icono y data-i18n.
 ========================================================================= -->
-<nav id="bottomNav" aria-label="Navegación por secciones"
+<nav id="bottomNav" aria-label="Navegacion por secciones"
      class="md:hidden fixed bottom-4 inset-x-4 z-40 glass border border-brd rounded-2xl shadow-soft">
   <div class="flex items-stretch justify-between px-2 py-2">
     <a href="#inicio" class="bottom-nav-link" data-section="inicio">
@@ -222,7 +221,7 @@
     </a>
     <a href="#sobre-mi" class="bottom-nav-link" data-section="sobre-mi">
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
-      <span data-i18n="nav_about">Sobre mí</span>
+      <span data-i18n="nav_about">Sobre mi</span>
     </a>
     <a href="#skills" class="bottom-nav-link" data-section="skills">
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-5 6 5 6M16 6l5 6-5 6"/></svg>
@@ -266,14 +265,14 @@
       <p class="font-mono text-accent font-medium mt-4 text-sm sm:text-base" data-i18n="hero_role">// Mobile Developer · Android &amp; Flutter</p>
 
       <p class="text-muted mt-5 max-w-xl leading-relaxed" data-i18n="hero_bio">
-        Desarrollador Mobile enfocado en construir aplicaciones Android nativas con Kotlin y experiencias multiplataforma con Flutter. Autodidacta, curioso y comprometido con escribir código limpio y mantenible.
+        Desarrollador Mobile enfocado en construir aplicaciones Android nativas con Kotlin y experiencias multiplataforma con Flutter. Autodidacta, curioso y comprometido con escribir codigo limpio y mantenible.
       </p>
 
       <div class="flex flex-wrap items-center gap-4 mt-8">
         <a href="#proyectos" class="px-6 py-3 rounded-xl bg-accent text-white font-medium text-sm hover:bg-accent2 transition-colors shadow-soft" data-i18n="hero_cta_projects">Ver Proyectos</a>
         <a href="#contacto" class="px-6 py-3 rounded-xl border border-brd font-medium text-sm hover:border-accent2 hover:text-accent2 transition-colors" data-i18n="hero_cta_contact">Contactar</a>
-        <!-- Botón de descarga de CV: coloca tu archivo "CV-OscarBenites.pdf" junto a este index.html -->
-        <a href="CV-OscarBenites.pdf" download="CV-OscarBenites.pdf"
+        <!-- Descarga de CV: -->
+        <a href="./File/CV-OscarBenites-IT.pdf" download="CV-OscarBenites-IT.pdf"
            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-accent2 text-accent2 font-medium text-sm hover:bg-accent2 hover:text-white transition-colors">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
           <span data-i18n="hero_cta_cv">Descargar CV (PDF)</span>
@@ -282,14 +281,14 @@
 
       <!-- Redes sociales -->
       <div class="flex items-center gap-4 mt-8">
-        <!-- TODO: reemplaza estos href por tus perfiles reales -->
-        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+        <!-- Hipervinculos de contactos de las redes -->
+        <a href="https://github.com/OscarBenites" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.98 3.29 9.2 7.86 10.7.57.1.78-.25.78-.55v-2.1c-3.2.7-3.87-1.35-3.87-1.35-.53-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.82 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55 4.56-1.51 7.85-5.73 7.85-10.7C23.02 5.24 18.27.5 12 .5Z"/></svg>
         </a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+        <a href="https://www.linkedin.com/in/oscar-benites-8244841a3/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.98h4.96V23H.5V8.98ZM8.9 8.98h4.76v1.92h.07c.66-1.25 2.29-2.57 4.71-2.57 5.04 0 5.97 3.32 5.97 7.63V23h-4.96v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.28V23H8.9V8.98Z"/></svg>
         </a>
-        <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Correo electrónico" class="social-icon">
+        <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Correo electronico" class="social-icon">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
         </a>
       </div>
@@ -313,14 +312,14 @@
 </section>
 
 <!-- ========================================================================
-     SOBRE MÍ
+     SOBRE Mi
 ========================================================================= -->
 <section id="sobre-mi" class="px-5 sm:px-8 py-20 border-t border-brd">
   <div class="max-w-3xl mx-auto text-center reveal">
-    <span class="font-mono text-xs text-accent2 font-medium" data-i18n="about_eyebrow">// sobre mí</span>
+    <span class="font-mono text-xs text-accent2 font-medium" data-i18n="about_eyebrow">// sobre mi</span>
     <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="about_title">Encantado de conocerte</h2>
     <p class="text-muted mt-5 leading-relaxed" data-i18n="about_body">
-      Soy técnico en Computación e Informática con una sólida base autodidacta en desarrollo Mobile. Mi curiosidad me impulsa a mejorar constantemente mis habilidades en Android y Flutter, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicación que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo.
+      Soy técnico en Computacion e Informática con una solida base autodidacta en desarrollo Mobile. Mi curiosidad me impulsa a mejorar constantemente mis habilidades en Android y Flutter, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicacion que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo.
     </p>
   </div>
 </section>
@@ -328,7 +327,7 @@
 <!-- ========================================================================
      SKILLS — Stack Mobile categorizado
      Para agregar una habilidad nueva: añade un <span> con la clase "badge"
-     dentro de la categoría correspondiente.
+     dentro de la categoria correspondiente.
 ========================================================================= -->
 <section id="skills" class="px-5 sm:px-8 py-20 bg-surface-2/60 border-t border-brd">
   <div class="max-w-6xl mx-auto">
@@ -339,7 +338,7 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-      <!-- Categoría: Lenguajes -->
+      <!-- Categoria: Lenguajes -->
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_languages">Lenguajes</h3>
         <div class="flex flex-wrap gap-2">
@@ -366,7 +365,7 @@
         </div>
       </div>
 
-      <!-- Categoría: Frameworks & UI -->
+      <!-- Categoria: Frameworks & UI -->
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.05s">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_frameworks">Frameworks &amp; UI</h3>
         <div class="flex flex-wrap gap-2">
@@ -388,7 +387,7 @@
         </div>
       </div>
 
-      <!-- Categoría: Backend & DB -->
+      <!-- Categoria: Backend & DB -->
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.1s">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_backend">Backend &amp; DB</h3>
         <div class="flex flex-wrap gap-2">
@@ -420,7 +419,7 @@
         </div>
       </div>
 
-      <!-- Categoría: Buenas Prácticas -->
+      <!-- Categoria: Buenas Prácticas -->
       <div class="reveal bg-surface border border-brd rounded-2xl p-6 shadow-soft" style="transition-delay:.15s">
         <h3 class="font-display font-semibold text-sm mb-4" data-i18n="skills_practices">Buenas Prácticas</h3>
         <div class="flex flex-wrap gap-2">
@@ -459,7 +458,7 @@
 <!-- ========================================================================
      PROYECTOS
      Para agregar un proyecto nuevo: copia un <article class="project-card">
-     completo y edita imagen, título, descripción, badges y enlaces.
+     completo y edita imagen, titulo, descripcion, badges y enlaces.
 ========================================================================= -->
 <section id="proyectos" class="px-5 sm:px-8 py-20 border-t border-brd">
   <div class="max-w-6xl mx-auto">
@@ -477,7 +476,7 @@
           <span class="absolute top-3 left-3 text-[11px] font-mono px-2 py-1 rounded-full bg-black/60 text-white" data-i18n="tag_progress">En desarrollo</span>
         </div>
         <h3 class="font-display font-semibold">Google Extension</h3>
-        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj1_desc">Extensión de Chrome para reemplazo de texto mediante comandos con prefijo, configurable desde un panel web.</p>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj1_desc">Extension de Chrome para reemplazo de texto mediante comandos con prefijo, configurable desde un panel web.</p>
         <div class="flex flex-wrap gap-1.5 mt-3">
           <span class="tech-badge">JavaScript</span><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span>
         </div>
@@ -494,7 +493,7 @@
           <span class="absolute top-3 left-3 text-[11px] font-mono px-2 py-1 rounded-full bg-black/60 text-white" data-i18n="tag_progress">En desarrollo</span>
         </div>
         <h3 class="font-display font-semibold">Bot Discord</h3>
-        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj2_desc">Bot de moderación y utilidad para canales y servidores de Discord.</p>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj2_desc">Bot de moderacion y utilidad para canales y servidores de Discord.</p>
         <div class="flex flex-wrap gap-1.5 mt-3">
           <span class="tech-badge">JavaScript</span><span class="tech-badge">Node.js</span><span class="tech-badge">JSON</span>
         </div>
@@ -511,7 +510,7 @@
           <span class="absolute top-3 left-3 text-[11px] font-mono px-2 py-1 rounded-full bg-black/60 text-white" data-i18n="tag_progress">En desarrollo</span>
         </div>
         <h3 class="font-display font-semibold">Agenda</h3>
-        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj3_desc">Gestión y organización académica: cálculo y promedio de notas, horario, apuntes y recordatorios.</p>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj3_desc">Gestion y organizacion académica: cálculo y promedio de notas, horario, apuntes y recordatorios.</p>
         <div class="flex flex-wrap gap-1.5 mt-3">
           <span class="tech-badge">Kotlin</span><span class="tech-badge">Java</span><span class="tech-badge">Android SDK</span>
         </div>
@@ -537,20 +536,20 @@
 </section>
 
 <!-- ========================================================================
-     EDUCACIÓN & CERTIFICACIONES (datos reales del CV)
+     EDUCACIoN & CERTIFICACIONES (datos reales del CV)
 ========================================================================= -->
 <section id="educacion" class="px-5 sm:px-8 py-20 bg-surface-2/60 border-t border-brd">
   <div class="max-w-3xl mx-auto">
     <div class="text-center reveal mb-14">
-      <span class="font-mono text-xs text-accent2 font-medium" data-i18n="edu_eyebrow">// formación</span>
-      <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="edu_title">Educación &amp; Certificaciones</h2>
+      <span class="font-mono text-xs text-accent2 font-medium" data-i18n="edu_eyebrow">// formacion</span>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="edu_title">Educacion &amp; Certificaciones</h2>
     </div>
 
     <div class="space-y-8 border-l-2 border-brd pl-8 ml-1">
 
       <div class="reveal relative timeline-dot">
-        <h3 class="font-display font-semibold">Computación e Informática</h3>
-        <p class="text-accent2 text-sm font-medium mt-0.5">Instituto Superior Tecnológico Cibertec</p>
+        <h3 class="font-display font-semibold">Computacion e Informática</h3>
+        <p class="text-accent2 text-sm font-medium mt-0.5">Instituto Superior Tecnologico Cibertec</p>
         <p class="text-muted text-xs font-mono mt-1">2019 — 2026 · Callao, Bellavista</p>
         <p class="text-muted text-sm mt-2" data-i18n="edu_cibertec_desc">Técnico – Estudiante. Ciclo V, Tercio Superior.</p>
       </div>
@@ -563,7 +562,7 @@
 
       <div class="reveal relative timeline-dot cert-item" style="transition-delay:.1s"
            data-cert-title="Certificado — Power BI" data-cert-org="Lima Educa · Perú Digital · Sep–Oct 2024 · 8h"
-           data-cert-img="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+           data-cert-img="/Certificados/PowerBI-Certificado.png">
         <h3 class="font-display font-semibold" data-i18n="edu_cert1">Certificado — Power BI</h3>
         <p class="text-accent2 text-sm font-medium mt-0.5">Lima Educa · Perú Digital</p>
         <p class="text-muted text-xs font-mono mt-1">Sep — Oct 2024 · 8h</p>
@@ -586,9 +585,9 @@
       </div>
 
       <div class="reveal relative timeline-dot cert-item" style="transition-delay:.2s"
-           data-cert-title="Certificado — Fundamentos de Programación y Tecnologías de la Información" data-cert-org="Cibertec · Mar 2019 – Feb 2020 · 32h"
+           data-cert-title="Certificado — Fundamentos de Programacion y Tecnologias de la Informacion" data-cert-org="Cibertec · Mar 2019 – Feb 2020 · 32h"
            data-cert-img="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
-        <h3 class="font-display font-semibold" data-i18n="edu_cert3">Certificado — Fundamentos de Programación y Tecnologías de la Información</h3>
+        <h3 class="font-display font-semibold" data-i18n="edu_cert3">Certificado — Fundamentos de Programacion y Tecnologias de la Informacion</h3>
         <p class="text-accent2 text-sm font-medium mt-0.5">Cibertec</p>
         <p class="text-muted text-xs font-mono mt-1">Mar 2019 — Feb 2020 · 32h</p>
         <span class="cert-view-hint">
@@ -608,7 +607,7 @@
   <div class="max-w-2xl mx-auto text-center reveal">
     <span class="font-mono text-xs text-accent2 font-medium" data-i18n="contact_eyebrow">// hablemos</span>
     <h2 class="font-display font-bold text-2xl sm:text-3xl mt-2" data-i18n="contact_title">¿Te interesa colaborar conmigo?</h2>
-    <p class="text-muted mt-3" data-i18n="contact_sub">Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboración.</p>
+    <p class="text-muted mt-3" data-i18n="contact_sub">Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboracion.</p>
 
     <div class="flex items-center justify-center gap-2 mt-8 max-w-md mx-auto bg-surface border border-brd rounded-2xl p-2 pl-5 shadow-soft">
       <span id="emailText" class="font-mono text-sm text-muted truncate">oscar.benites_825@hotmail.com</span>
@@ -641,7 +640,7 @@
       <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.98h4.96V23H.5V8.98ZM8.9 8.98h4.76v1.92h.07c.66-1.25 2.29-2.57 4.71-2.57 5.04 0 5.97 3.32 5.97 7.63V23h-4.96v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.28V23H8.9V8.98Z"/></svg>
       </a>
-      <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Correo electrónico" class="social-icon">
+      <a href="mailto:oscar.benites_825@hotmail.com" aria-label="Correo electronico" class="social-icon">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
       </a>
     </div>
@@ -650,13 +649,13 @@
 </footer>
 
 <!-- ========================================================================
-     BOTÓN FLOTANTE "VOLVER ARRIBA" (cohete)
-     Aparece solo tras hacer scroll hacia abajo. En móvil se posiciona por
+     BOToN FLOTANTE "VOLVER ARRIBA" (cohete)
+     Aparece solo tras hacer scroll hacia abajo. En movil se posiciona por
      encima del bottom nav; en desktop va en la esquina inferior derecha.
 ========================================================================= -->
 <button id="backToTop" type="button" aria-label="Volver arriba"
   class="fixed right-5 bottom-24 md:bottom-6 z-40 w-12 h-12 squircle bg-accent text-white flex items-center justify-center shadow-soft opacity-0 translate-y-3 pointer-events-none transition-all duration-300 hover:bg-accent2">
-  <!-- Ícono de cohete -->
+  <!-- icono de cohete -->
   <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M12 2c2.5 2 4 5.5 4 9 0 2-1 4-1 4H9s-1-2-1-4c0-3.5 1.5-7 4-9Z"/>
     <path d="M9 15l-3 3 1 3 3-3M15 15l3 3-1 3-3-3"/>
@@ -701,7 +700,7 @@
           <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="FitTrack app" class="w-full h-full object-cover">
         </div>
         <h4 class="font-display font-semibold">FitTrack</h4>
-        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj5_desc">Seguimiento de rutinas y progreso físico con gráficos locales y persistencia en Room.</p>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj5_desc">Seguimiento de rutinas y progreso fisico con gráficos locales y persistencia en Room.</p>
         <div class="flex flex-wrap gap-1.5 mt-3">
           <span class="tech-badge">Jetpack Compose</span><span class="tech-badge">Room</span><span class="tech-badge">MVVM</span>
         </div>
@@ -717,7 +716,7 @@
           <img src="https://tse1.mm.bing.net/th/id/OIP.vJSwYA1G8hkQMH2XVVhf0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="WeatherNow app" class="w-full h-full object-cover">
         </div>
         <h4 class="font-display font-semibold">WeatherNow</h4>
-        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj6_desc">Clima en tiempo real por geolocalización, consumiendo una REST API pública.</p>
+        <p class="text-muted text-sm mt-1.5 leading-relaxed" data-i18n="proj6_desc">Clima en tiempo real por geolocalizacion, consumiendo una REST API pública.</p>
         <div class="flex flex-wrap gap-1.5 mt-3">
           <span class="tech-badge">SwiftUI</span><span class="tech-badge">REST API</span><span class="tech-badge">Swift</span>
         </div>
@@ -767,7 +766,7 @@
   }
   .skill-icon svg{ width:.9rem; height:.9rem; }
 
-  /* Bottom nav móvil */
+  /* Bottom nav movil */
   .bottom-nav-link{
     display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.2rem;
     flex:1; padding:.4rem .2rem; border-radius:.9rem; color:var(--text-muted);
@@ -775,7 +774,7 @@
   }
   .bottom-nav-link.is-active{ color:var(--accent2); background:color-mix(in srgb, var(--accent2) 10%, transparent); }
 
-  /* Botón volver arriba: se activa por JS al hacer scroll (ver sección 7 del script) */
+  /* Boton volver arriba: se activa por JS al hacer scroll (ver seccion 7 del script) */
   #backToTop.is-visible{ opacity:1; transform:translateY(0); pointer-events:auto; }
 
   /* Certificados clicables */
@@ -783,7 +782,7 @@
   .cert-item:hover .cert-view-hint{ color:var(--accent2); }
   .cert-view-hint{ display:inline-flex; align-items:center; gap:.3rem; color:var(--text-muted); font-size:.72rem; font-family:'JetBrains Mono',monospace; margin-top:.4rem; transition:color .2s ease; }
 
-  /* Deja espacio para el bottom nav flotante en móvil */
+  /* Deja espacio para el bottom nav flotante en movil */
   @media (max-width: 767px){
     body{ padding-bottom:5.5rem; }
   }
@@ -801,7 +800,7 @@
 </style>
 
 <!-- ========================================================================
-     JAVASCRIPT — Tema, Idioma, Menú móvil, Modal, Copiar correo, Reveal
+     JAVASCRIPT — Tema, Idioma, Menú movil, Modal, Copiar correo, Reveal
 ========================================================================= -->
 <script>
 (function(){
@@ -831,30 +830,30 @@
   });
 
   /* ---------------------------------------------------------------------
-     2) IDIOMA ES / EN — diccionario de traducción + persistencia
+     2) IDIOMA ES / EN — diccionario de traduccion + persistencia
      Para añadir un texto traducible: agrega data-i18n="tuClave" al
      elemento y su par ES/EN en el objeto `dict` de abajo.
   --------------------------------------------------------------------- */
   const dict = {
-    nav_about:      { es: 'Sobre mí',   en: 'About' },
+    nav_about:      { es: 'Sobre mi',   en: 'About' },
     nav_skills:     { es: 'Skills',     en: 'Skills' },
     nav_projects:   { es: 'Proyectos',  en: 'Projects' },
-    nav_education:  { es: 'Educación',  en: 'Education' },
+    nav_education:  { es: 'Educacion',  en: 'Education' },
     nav_contact:    { es: 'Contacto',   en: 'Contact' },
     nav_home:       { es: 'Inicio',     en: 'Home' },
 
     hero_available: { es: 'Disponible para trabajar', en: 'Available for work' },
     hero_greeting:  { es: 'Hola, soy', en: "Hi, I'm" },
     hero_role:      { es: '// Mobile Developer · Android & Flutter', en: '// Mobile Developer · Android & Flutter' },
-    hero_bio:       { es: 'Desarrollador Mobile enfocado en construir aplicaciones Android nativas con Kotlin y experiencias multiplataforma con Flutter. Autodidacta, curioso y comprometido con escribir código limpio y mantenible.',
+    hero_bio:       { es: 'Desarrollador Mobile enfocado en construir aplicaciones Android nativas con Kotlin y experiencias multiplataforma con Flutter. Autodidacta, curioso y comprometido con escribir codigo limpio y mantenible.',
                        en: 'Mobile developer focused on building native Android apps with Kotlin and cross-platform experiences with Flutter. Self-taught, curious, and committed to writing clean, maintainable code.' },
     hero_cta_projects: { es: 'Ver Proyectos', en: 'View Projects' },
     hero_cta_contact:  { es: 'Contactar', en: 'Contact Me' },
     hero_cta_cv:       { es: 'Descargar CV (PDF)', en: 'Download CV (PDF)' },
 
-    about_eyebrow: { es: '// sobre mí', en: '// about me' },
+    about_eyebrow: { es: '// sobre mi', en: '// about me' },
     about_title:   { es: 'Encantado de conocerte', en: 'Nice to meet you' },
-    about_body:    { es: 'Soy técnico en Computación e Informática con una sólida base autodidacta en desarrollo Mobile. Mi curiosidad me impulsa a mejorar constantemente mis habilidades en Android y Flutter, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicación que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo.',
+    about_body:    { es: 'Soy técnico en Computacion e Informática con una solida base autodidacta en desarrollo Mobile. Mi curiosidad me impulsa a mejorar constantemente mis habilidades en Android y Flutter, mientras que mi compromiso y responsabilidad aseguran que cada proyecto reciba la dedicacion que merece. Si buscas a alguien apasionado y con muchas ganas de aprender y crecer en un entorno profesional, te invito a explorar mi trabajo.',
                      en: "I'm a Computer Science technician with a strong self-taught foundation in mobile development. My curiosity drives me to constantly improve my Android and Flutter skills, while my commitment ensures every project gets the dedication it deserves. If you're looking for someone passionate and eager to learn and grow in a professional environment, I invite you to explore my work." },
 
     skills_eyebrow:    { es: '// stack técnico', en: '// tech stack' },
@@ -867,12 +866,12 @@
     projects_eyebrow: { es: '// trabajo reciente', en: '// recent work' },
     projects_title:   { es: 'Proyectos', en: 'Projects' },
     tag_progress:     { es: 'En desarrollo', en: 'In progress' },
-    proj1_desc: { es: 'Extensión de Chrome para reemplazo de texto mediante comandos con prefijo, configurable desde un panel web.', en: 'Chrome extension for text replacement via prefixed commands, configurable from a web panel.' },
-    proj2_desc: { es: 'Bot de moderación y utilidad para canales y servidores de Discord.', en: 'Moderation and utility bot for Discord channels and servers.' },
-    proj3_desc: { es: 'Gestión y organización académica: cálculo y promedio de notas, horario, apuntes y recordatorios.', en: 'Academic management app: grade averaging, schedule, notes and reminders.' },
+    proj1_desc: { es: 'Extension de Chrome para reemplazo de texto mediante comandos con prefijo, configurable desde un panel web.', en: 'Chrome extension for text replacement via prefixed commands, configurable from a web panel.' },
+    proj2_desc: { es: 'Bot de moderacion y utilidad para canales y servidores de Discord.', en: 'Moderation and utility bot for Discord channels and servers.' },
+    proj3_desc: { es: 'Gestion y organizacion académica: cálculo y promedio de notas, horario, apuntes y recordatorios.', en: 'Academic management app: grade averaging, schedule, notes and reminders.' },
     proj4_desc: { es: 'App de productividad multiplataforma con tableros de tareas y recordatorios sincronizados.', en: 'Cross-platform productivity app with task boards and synced reminders.' },
-    proj5_desc: { es: 'Seguimiento de rutinas y progreso físico con gráficos locales y persistencia en Room.', en: 'Workout and progress tracking with local charts and Room persistence.' },
-    proj6_desc: { es: 'Clima en tiempo real por geolocalización, consumiendo una REST API pública.', en: 'Real-time weather by geolocation, consuming a public REST API.' },
+    proj5_desc: { es: 'Seguimiento de rutinas y progreso fisico con gráficos locales y persistencia en Room.', en: 'Workout and progress tracking with local charts and Room persistence.' },
+    proj6_desc: { es: 'Clima en tiempo real por geolocalizacion, consumiendo una REST API pública.', en: 'Real-time weather by geolocation, consuming a public REST API.' },
     link_github: { es: 'GitHub', en: 'GitHub' },
     link_demo:   { es: 'Ver Demo', en: 'View Demo' },
     link_apk:    { es: 'APK', en: 'APK' },
@@ -880,18 +879,18 @@
     more_projects_sub:   { es: 'Explora 3 proyectos adicionales', en: 'Explore 3 additional projects' },
     modal_title: { es: 'Más proyectos', en: 'More projects' },
 
-    edu_eyebrow: { es: '// formación', en: '// background' },
-    edu_title:   { es: 'Educación & Certificaciones', en: 'Education & Certifications' },
+    edu_eyebrow: { es: '// formacion', en: '// background' },
+    edu_title:   { es: 'Educacion & Certificaciones', en: 'Education & Certifications' },
     edu_cibertec_desc: { es: 'Técnico – Estudiante. Ciclo V, Tercio Superior.', en: 'Technical student. Term V, top academic third.' },
     edu_secondary: { es: 'Secundaria completa', en: 'High school diploma' },
     edu_cert1: { es: 'Certificado — Power BI', en: 'Certificate — Power BI' },
     edu_cert2: { es: 'Certificado — Excel 2016 Básico Online', en: 'Certificate — Excel 2016 Basic Online' },
-    edu_cert3: { es: 'Certificado — Fundamentos de Programación y Tecnologías de la Información', en: 'Certificate — Programming & IT Fundamentals' },
+    edu_cert3: { es: 'Certificado — Fundamentos de Programacion y Tecnologias de la Informacion', en: 'Certificate — Programming & IT Fundamentals' },
     cert_view: { es: 'Ver certificado', en: 'View certificate' },
 
     contact_eyebrow: { es: '// hablemos', en: "// let's talk" },
     contact_title:   { es: '¿Te interesa colaborar conmigo?', en: 'Interested in working together?' },
-    contact_sub:     { es: 'Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboración.', en: "I'm always open to talk about job opportunities or collaborations." },
+    contact_sub:     { es: 'Siempre estoy abierto a hablar sobre oportunidades laborales o de colaboracion.', en: "I'm always open to talk about job opportunities or collaborations." },
     contact_copied:  { es: '¡Correo copiado!', en: 'Email copied!' },
 
     footer_copy: { es: 'Copyright © Todos los derechos reservados | por Oscar Benites', en: 'Copyright © All Rights Reserved | by Oscar Benites' },
@@ -918,7 +917,7 @@
   });
 
   /* ---------------------------------------------------------------------
-     3) BOTTOM NAV MÓVIL — resalta el ícono de la sección visible
+     3) BOTTOM NAV MoVIL — resalta el icono de la seccion visible
   --------------------------------------------------------------------- */
   const bottomLinks = document.querySelectorAll('.bottom-nav-link');
   const navSections = ['inicio','sobre-mi','skills','proyectos','contacto']
@@ -996,7 +995,7 @@
   });
 
   /* ---------------------------------------------------------------------
-     6) ANIMACIÓN "REVEAL" AL HACER SCROLL
+     6) ANIMACIoN "REVEAL" AL HACER SCROLL
   --------------------------------------------------------------------- */
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(function(entries){
@@ -1010,7 +1009,7 @@
   revealEls.forEach(function(el){ io.observe(el); });
 
   /* ---------------------------------------------------------------------
-     7) BOTÓN FLOTANTE "VOLVER ARRIBA" (cohete)
+     7) BOToN FLOTANTE "VOLVER ARRIBA" (cohete)
      Aparece tras superar cierto scroll y sube suavemente al hacer clic.
   --------------------------------------------------------------------- */
   const backToTop = document.getElementById('backToTop');
